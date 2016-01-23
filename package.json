@@ -1,0 +1,22 @@
+{
+  "name": "stylus-material",
+  "version": "0.0.1",
+  "description": "A collection of stylus mixins for material design",
+  "author": "Daniel Bartholomae <db@wappforge.com> (http://www.wappforge.com/)",
+  "license": "MIT",
+  "main": "styl/index.styl",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbartholomae/stylus-material.git"
+  },
+  "keywords": [
+    "stylus",
+    "material",
+    "design",
+    "css"
+  ],
+  "bugs": {
+    "url": "https://github.com/dbartholomae/stylus-material/issues"
+  },
+  "homepage": "https://github.com/dbartholomae/stylus-material#readme"
+}
