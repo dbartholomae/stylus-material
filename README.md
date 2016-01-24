@@ -1,5 +1,5 @@
 # stylus-material@0.0.1
-[![npm version](https://badge.fury.io/js/stylus-material.svg)](https://npmjs.org/package/stylus-material)  
+[![npm version](https://badge.fury.io/js/stylus-material.svg)](https://npmjs.org/package/stylus-material)
 [![dependency status](https://david-dm.org/dbartholomae/stylus-material.svg?theme=shields.io)](https://david-dm.org/dbartholomae/stylus-material)
 [![devDependency status](https://david-dm.org/dbartholomae/stylus-material/dev-status.svg)](https://david-dm.org/dbartholomae/stylus-material#info=devDependencies)
 [![Gitter](https://badges.gitter.im/dbartholomae/stylus-material.svg)](https://gitter.im/dbartholomae/stylus-material) 
@@ -11,6 +11,7 @@ A collection of stylus mixins for material design. This is basically a port of
 [Stylus](https://github.com/stylus/stylus/) using Mixins.
  
 ## Installation
+__This module won't be available via npm before version 1.0.0!__
 Install with `npm`:
 ```sh
 npm install stylus-material --save
