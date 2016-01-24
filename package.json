@@ -5,6 +5,14 @@
   "author": "Daniel Bartholomae <db@wappforge.com> (http://www.wappforge.com/)",
   "license": "MIT",
   "main": "styl/index.styl",
+  "scripts": {
+    "build": "stylus examples",
+    "size": "gzipped examples/index.css"
+  },
+  "devDependencies": {
+    "stylus": "0.53.0",
+    "gzipped": "0.0.5"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dbartholomae/stylus-material.git"

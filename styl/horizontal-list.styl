@@ -1,0 +1,23 @@
+// Mixin: Horizontal List
+//
+// Create a horizontal text list with a separator
+//
+// ex. sm-horizontal-list()
+// ex. sm-horizontal-list($separator = '/')
+// ex. sm-horizontal-list($separator = '\E5CC', $separator-font = 'Material Icons')
+sm-horizontal-list($separator = '', $separator-font = false)
+  list-style: none
+  & > li
+    display: inline-block
+    &:before
+      if $separator-font
+        font-family: $separator-font
+        font-weight: normal
+        font-style: normal
+        -webkit-font-smoothing: antialiased
+      content: $separator
+      vertical-align: top
+      margin: 0 10px 0 8px
+
+    &:first-child:before
+      display: none

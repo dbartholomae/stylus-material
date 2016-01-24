@@ -1,0 +1,14 @@
+footer ul {
+  list-style: none;
+}
+footer ul > li {
+  display: inline-block;
+}
+footer ul > li:before {
+  content: '—';
+  vertical-align: top;
+  margin: 0 10px 0 8px;
+}
+footer ul > li:first-child:before {
+  display: none;
+}
