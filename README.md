@@ -28,10 +28,14 @@ npm install stylus-material --save
 </footer>
 ...
 ```
+
 ```styl
-  @require "../node_modules/stylus-material"
+@require "../node_modules/stylus-material"
   
-  footer ul
+footer
+  sm-navbar()
+
+  & ul
     sm-horizontal-list('—')
 ```
 

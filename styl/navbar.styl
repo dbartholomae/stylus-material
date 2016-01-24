@@ -1,0 +1,16 @@
+// Mixin: Navbar
+//
+// Create a full-width bar elevated to height 1 with sensible defaults (see example).
+//
+// ex. sm-navbar($bgcolor = $primary-color, $font-color = $light-text-color, $padding = 8px)
+sm-navbar($bgcolor = $primary-color, $font-color = $light-text-color, $padding = 8px)
+  position: relative
+  height: 100%
+  width: 100%
+  color: $font-color
+  background-color: $bgcolor
+  padding: $padding
+  sm-z(1)
+
+  > *
+    margin 0

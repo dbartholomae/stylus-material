@@ -1,0 +1,10 @@
+// Mixin: z
+//
+// Create shadows based on z coordinate
+//
+// ex. sm-z(1)
+sm-z($depth)
+  if $depth > 0
+    box-shadow: 0 ($depth * 5 - 3)px ($depth * 6)px 0 rgba(0, 0, 0, (.24 - .02 * ($depth - 3) * ($depth - 3))), 0 (8 * $depth - 7)px (16 * $depth - 7)px 0 rgba(0, 0, 0, (.1 + .03 * $depth))
+  else
+    box-shadow: none !important
