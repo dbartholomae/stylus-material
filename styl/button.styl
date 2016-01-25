@@ -1,0 +1,81 @@
+@require "./variables.styl"
+@require "./z"
+
+// Mixin: Button
+//
+// Create a button with sensible defaults (see example).
+//
+// ex. sm-button($bgcolor: $accent-color, $color: $light-text-color, $font-size: 1.3rem,
+//       $hover-bgcolor: ($bgcolor == transparent ? transparent : lighten($bgcolor, 5%)),
+//       $disabled-bgcolor: ($bgcolor == transparent ? transparent : #DFDFDF),
+//       $disabled-color: #9F9F9F, $height: 36px, $padding: 0 2rem,
+//       $border: none, $border-radius: 2px, $z = 1)
+sm-button($bgcolor = $accent-color, $color = $light-text-color, $font-size = 1.3rem,
+    $hover-bgcolor = ($bgcolor == transparent ? transparent : lighten($bgcolor, 5%)),
+    $disabled-bgcolor = ($bgcolor == transparent ? transparent : #DFDFDF),
+    $disabled-color = #9F9F9F, $height = 36px, $border = none, $border-radius = 2px, $z = 1)
+  color: $color
+  background-color: $bgcolor
+  font-size: $font-size
+  sm-z($z)
+
+  border: $border
+  border-radius: $border-radius
+  height: $height
+  line-height: $height
+  padding: 0 2rem
+
+  text-transform: uppercase
+  text-decoration: none
+  display: inline-block
+  outline: 0
+  text-align: center
+  letter-spacing: .5px
+  vertical-align: middle
+  cursor: pointer
+  // Gets rid of tap active state
+  -webkit-tap-highlight-color: transparent
+
+  transition: .2s ease-out
+  &:hover {
+    background-color: $hover-bgcolor
+    sm-z($z + .5)
+  }
+
+  &:disabled
+    background-color: $disabled-bgcolor
+    box-shadow: none
+    color: $disabled-color
+    cursor: default
+
+    &:hover
+      background-color: $disabled-bgcolor
+      color: $disabled-color
+
+// Mixin: Disc Button
+//
+// Create a disc button with sensible default size
+// ex. sm-button-disc($size: 37px)
+sm-button-disc($size = 37px)
+  sm-button()
+  position: relative
+  overflow: hidden
+  z-index: 1
+  sm-z(1)
+  width: $size
+  height: $size
+  line-height: $size
+  border-radius: 50%
+  padding: 0
+
+// Mixin: Flat Button
+//
+// Create a simple flat button.
+sm-button-flat()
+  sm-button($bgcolor: transparent, $color: $primary-text-color, $z: 0)
+
+// Mixin: Large Button
+//
+// Create a default but larger button.
+sm-button-large()
+  sm-button($font-size: 1.6 rem, $height: 54px)

@@ -12,6 +12,7 @@ A collection of stylus mixins for material design. This is basically a port of
  
 ## Installation
 __This module won't be available via npm before version 1.0.0!__
+
 Install with `npm`:
 ```sh
 npm install stylus-material --save
@@ -39,6 +40,8 @@ footer
   & ul
     sm-horizontal-list('—')
 ```
+
+Find examples of all components in the `examples` folder.
 
 ## Library size
 This library uses mostly mixins, therefore only what you actually use will increase your filesize.
