@@ -1,4 +1,20 @@
+// Colors
 $primary-color ?= #3F51B5
+$background-color ?= #FFFFFF
 $accent-color ?= #FF5622
 $light-text-color ?= #FFFFFF
 $primary-text-color ?= #202020
+
+// Media Query Ranges
+$small-screen ?= 600px
+$medium-screen ?= 992px
+$large-screen ?= 1200px
+$small-screen-up ?= $small-screen + 1
+$medium-screen-up ?= $medium-screen + 1
+$large-screen-up ?= $large-screen + 1
+
+$medium-and-up ?= "only screen and (min-width : " + $small-screen-up + ")"
+$large-and-up ?= "only screen and (min-width : " + $medium-screen-up + ")"
+$small-and-down ?= "only screen and (max-width : " + $small-screen + ")"
+$medium-and-down ?= "only screen and (max-width : " + ($medium-screen) + ")"
+$medium-only ?= "only screen and (min-width : " + $small-screen-up + ") and (max-width : " + $medium-screen + ")"
