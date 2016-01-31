@@ -16,11 +16,17 @@ main
         sm-button-disc()
 
   section.cards-section
+    & .cards-list
+      sm-columns(2)
     & article
       &.default
         sm-card()
       &.title-below-image
         sm-card($title-in-image: false)
+      &.green
+        sm-card($text-protection: darkgreen)
+      &.light
+        sm-card($text-protection: white, $title-color: black)
 
 footer
   sm-navbar()

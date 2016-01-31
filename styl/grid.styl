@@ -1,0 +1,46 @@
+@require "./variables.styl"
+@require "./z"
+
+// Mixin: Container
+//
+// Centers the content horizontally and sets a maximum width based on breakpoints.
+//
+// ex. sm-container()
+sm-container()
+  margin: 0 auto
+  max-width: 1280px
+  width: 90%
+
+  @media $medium-only
+    width: 85%
+  @media $large-and-up
+    width: 70%
+
+// Mixin: Columns
+//
+// Creates flexible columns based on a flexbox. All direct children of this element are affected.
+// Please note that margin needs to be given as percentage of total width
+// Defaults are shown in the example below.
+//
+// ex. sm-columns($n-large: 3, $n-medium: (ceil($n-large / 2)), $n-small: (ceil($n-large / 4)),
+//      $margin-horizontal: 1%, $margin-vertical: 0.5rem,
+//      $justify-content: space-around
+//    )
+sm-columns($n-large = 3, $n-medium = (ceil($n-large / 2)), $n-small = (ceil($n-large / 4)),
+      $margin-horizontal = 1%, $margin-vertical = 0.5rem,
+      $justify-content = space-around
+    )
+  display: flex
+  flex-wrap: wrap
+  justify-content: $justify-content
+
+  > *
+    margin-top: $margin-vertical
+    @media $small-and-down
+     width: (1 / $n-small) * 100% - $margin-horizontal
+
+    @media $medium-only
+      width: (1 / $n-medium) * 100% - $margin-horizontal
+
+    @media $large-and-up
+      width: (1 / $n-large) * 100% - $margin-horizontal
