@@ -12,17 +12,14 @@
 // ex. sm-card($bgcolor: $background-color, $title-in-image: true, $text-protection: #000,
 //        $title-size: 24px,
 //        $title-color: ($title-in-image ? $light-text-color : $primary-text-color),
-//        $top-margin: 0.5rem, $bottom-margin: 0.5rem, $padding: 20px,
-//        $title-tag: h1, $img-tag: img
+//        $padding: 20px, $title-tag: h1, $img-tag: img
 //     )
 sm-card($bgcolor = $background-color, $title-in-image = true, $text-protection = #000,
     $title-size = 24px,
     $title-color = ($title-in-image ? $light-text-color : $primary-text-color),
-    $top-margin = 0.5rem, $bottom-margin = 0.5rem, $padding = 20px,
-    $title-tag = h1, $img-tag = img
+    $padding = 20px, $title-tag = h1, $img-tag = img
     )
   position: relative
-  margin: $top-margin 0 $bottom-margin 0
   background-color: $bgcolor
   transition: box-shadow .25s
   border-radius: 2px
