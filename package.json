@@ -7,10 +7,12 @@
   "main": "styl/index.styl",
   "scripts": {
     "build": "stylus examples",
-    "size": "gzipped examples/index.css"
+    "size": "gzipped examples/index.css",
+    "dev": "nodemon --ext styl --watch examples/ --watch styl/ --exec npm run build"
   },
   "devDependencies": {
     "stylus": "0.53.0",
+    "nodemon": "1.8.1",
     "gzipped": "0.0.5"
   },
   "repository": {
