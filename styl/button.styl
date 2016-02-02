@@ -1,5 +1,6 @@
-@require "./variables.styl"
+@require "./variables"
 @require "./z"
+@require "./styles"
 
 // Mixin: Button
 //
@@ -61,16 +62,9 @@ sm-button($bgcolor = $accent-color, $color = $light-text-color, $font-size = 1.3
 // Create a disc button with sensible default size
 // ex. sm-button-disc($size: 37px)
 sm-button-disc($size = 37px)
-  sm-button()
   position: relative
-  overflow: hidden
-  z-index: 1
-  sm-z(1)
-  width: $size
-  height: $size
-  line-height: $size
-  border-radius: 50%
-  padding: 0
+  sm-button()
+  sm-circle($size)
 
 // Mixin: Flat Button
 //
