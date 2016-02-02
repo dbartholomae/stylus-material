@@ -1,0 +1,69 @@
+// Mixin: Collection
+//
+// Create a collection of content rows. Example shows defaults.
+//
+// ex. sm-collection($border-color = #e0e0e0, $list-selector = li, $bg-color = $background-color,
+//        $active-color = $primary-color, $active-bg-color = lighten($active-color, 55%),
+//        $hover = true, $hover-color = $primary-color, $hover-bg-color = lighten($primary-color, 70%),
+//        $title-tag = h1, $img-tag = img, $img-size = 34px, $img-circle = false, $vertical-padding = 20px,
+//        $content-tag = p
+//      )
+sm-collection($border-color = #e0e0e0, $list-selector = li, $bg-color = $background-color,
+    $active-color = $primary-color, $active-bg-color = lighten($active-color, 55%),
+    $hover = true, $hover-color = $primary-color, $hover-bg-color = lighten($primary-color, 70%),
+    $title-tag = h1, $img-tag = img, $img-size = 34px, $img-circle = false, $vertical-padding = 20px,
+    $content-tag = p
+  )
+  border: 1px solid $border-color
+  border-radius: 2px
+  overflow: hidden
+  position: relative
+
+  > *
+    display: block
+    background-color: $bg-color;
+    line-height: 1.5rem
+    padding: 10px $vertical-padding
+    margin: 0
+    border-bottom: 1px solid $border-color
+
+    &:last-child
+      border-bottom: none;
+
+    &:active
+      background-color: $active-bg-color
+      color: $active-color
+
+    if $hover
+      transition: .25s
+      &:hover
+        color: $hover-color
+        background-color: $hover-bg-color
+
+    if $img-tag
+      position: relative
+      & {$img-tag}
+        position: absolute
+        left: 20px
+        top: 5px
+        width: $img-size
+        height: $img-size
+        if $img-circle
+          sm-circle($img-size)
+      & {$content-tag}
+        position: relative
+        padding-left: $img-size + 7px
+        margin: 0
+        min-height: $img-size + 10px - $vertical-padding
+
+  if $title-tag
+    > {$title-tag}
+      padding: 10px 20px
+
+    > {$title-tag} ~ *:not({$title-tag})
+      padding-left: 30px
+      font-size: 1rem
+
+    if $img-tag
+      > {$title-tag} ~ *:not({$title-tag}) > {$img-tag}
+        left: 30px

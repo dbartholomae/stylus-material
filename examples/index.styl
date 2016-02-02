@@ -1,7 +1,7 @@
 @require "../styl"
 
 main
-  padding 0.5rem
+  sm-container()
 
   section.buttons-section
     & button
@@ -27,6 +27,10 @@ main
         sm-card($text-protection: darkgreen)
       &.light
         sm-card($text-protection: white, $title-color: black)
+
+  section.collection-section
+    & ul
+      sm-collection($img-circle: true)
 
 footer
   sm-navbar()
