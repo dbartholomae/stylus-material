@@ -5,7 +5,7 @@
 //
 // Create a box for content. See example for defaults.
 // If $title-in-image is true and $text-protection isn't false, a gradient with color
-// $text-protection will be applied to the bottom $title-size * 3 pixels of the image.
+// $text-protection will be applied to the bottom $title-size * 4 pixels of the image.
 // If the image isn't tall enough, $text-protection has to be disabled manually.
 // Currently only one-line-titles are supported if the title is overlayed over the image.
 //
@@ -50,11 +50,11 @@ sm-card($bgcolor = $background-color, $title-in-image = true, $text-protection =
           bottom: -($title-size * 1.5)px
           left: 0
           width: 100%
-          height: ($title-size * 3)px
+          height: ($title-size * 4)px
           z-index: -1
           pointer-events: none
           background: linear-gradient(to bottom,
-            rgba(0,0,0,0) 0%, alpha($text-protection,0.33) 66%, alpha($text-protection,0.65) 100%);
+            rgba(0,0,0,0) 0%, alpha($text-protection,0.33) 66%, alpha($text-protection,0.65) 100%)
 
   > {$img-tag}
     position: relative
