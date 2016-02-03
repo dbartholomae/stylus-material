@@ -5,13 +5,13 @@
 // ex. sm-collection($border-color = #e0e0e0, $list-selector = li, $bg-color = $background-color,
 //        $active-color = $primary-color, $active-bg-color = lighten($active-color, 55%),
 //        $hover = true, $hover-color = $primary-color, $hover-bg-color = lighten($primary-color, 70%),
-//        $title-tag = h1, $img-tag = img, $img-size = 34px, $img-circle = false, $vertical-padding = 20px,
+//        $title-tag = h4, $img-tag = img, $img-size = 34px, $img-circle = false, $vertical-padding = 20px,
 //        $content-tag = p
 //      )
 sm-collection($border-color = #e0e0e0, $list-selector = li, $bg-color = $background-color,
     $active-color = $primary-color, $active-bg-color = lighten($active-color, 55%),
     $hover = true, $hover-color = $primary-color, $hover-bg-color = lighten($primary-color, 70%),
-    $title-tag = h1, $img-tag = img, $img-size = 34px, $img-circle = false, $vertical-padding = 20px,
+    $title-tag = h4, $img-tag = img, $img-size = 34px, $img-circle = false, $vertical-padding = 20px,
     $content-tag = p
   )
   border: 1px solid $border-color
@@ -24,7 +24,6 @@ sm-collection($border-color = #e0e0e0, $list-selector = li, $bg-color = $backgro
     background-color: $bg-color;
     line-height: 1.5rem
     padding: 10px $vertical-padding
-    margin: 0
     border-bottom: 1px solid $border-color
 
     &:last-child
@@ -58,11 +57,11 @@ sm-collection($border-color = #e0e0e0, $list-selector = li, $bg-color = $backgro
 
   if $title-tag
     > {$title-tag}
-      padding: 10px 20px
+      padding: 30px 20px
+      margin: 0
 
     > {$title-tag} ~ *:not({$title-tag})
       padding-left: 30px
-      font-size: 1rem
 
     if $img-tag
       > {$title-tag} ~ *:not({$title-tag}) > {$img-tag}

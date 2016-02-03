@@ -1,6 +1,49 @@
-body
-  margin 0
+@require "./variables"
 
-ul
-  list-style-type: none
-  padding: 0
+sm-init($init-ul = true, $init-font = "Roboto", $h1-fontsize = 4.2rem, $h2-fontsize = 3.56rem,
+  $h3-fontsize = 2.92rem, $h4-fontsize = 2.28rem, $h5-fontsize = 1.64rem, $h6-fontsize = 1rem
+)
+  body
+    margin 0
+
+  if $init-ul
+    ul
+      list-style-type: none
+      padding: 0
+
+  a
+    text-decoration: none
+
+  if $init-font
+    html
+      line-height: 1.5;
+
+      @media $small-and-down
+        font-size: 14px;
+
+      @media $medium-only
+        font-size: 14.5px;
+
+      @media $large-and-up
+        font-size: 15px;
+
+      font-family: $init-font, sans-serif
+      font-weight: normal
+      color: $primary-text-color
+
+    h1, h2, h3, h4, h5, h6
+      font-weight: 400
+      line-height: 1.1
+
+      & a
+        font-weight: inherit
+
+  for $num in (1..6)
+    $fontsize-var = "$h" + $num + "-fontsize"
+    $fontsize = convert($fontsize-var)
+    $tag = "h" + $num
+    if $fontsize
+      {convert($tag)}
+        font-size: $fontsize
+        line-height: 110%
+        margin: ($fontsize / 2) 0 ($fontsize / 2.5) 0
