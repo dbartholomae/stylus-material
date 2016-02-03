@@ -1,19 +1,48 @@
-@require "./variables"
-@require "./z"
+@require "variables"
+@require "clearfix"
+@require "grid"
+@require "z"
 
 // Mixin: Navbar
 //
 // Create a full-width bar elevated to height 1 with sensible defaults (see example).
 //
-// ex. sm-navbar($bgcolor: $primary-color, $font-color: $light-text-color, $padding: 8px)
-sm-navbar($bgcolor = $primary-color, $font-color = $light-text-color, $padding = 8px)
+// ex. sm-navbar($bgcolor = $primary-color, $font-color = $light-text-color, $padding = 8px,
+//           $use-container = true, $title-tag = "h1", $right-align = true
+//         )
+sm-navbar($bgcolor = $primary-color, $font-color = $light-text-color, $padding = 8px,
+      $use-container = true, $title-tag = "h1", $right-align = true
+    )
+  sm-clearfix()
   position: relative
-  height: 100%
-  width: 100%
   color: $font-color
   background-color: $bgcolor
-  padding: $padding
   sm-z(1)
+  if $use-container
+    sm-container()
 
   > *
-    margin 0
+    color: $font-color
+    padding: $padding
+
+  > a
+    &:hover
+      background-color: lighten($bgcolor, 10%)
+    &:active
+      background-color: lighten($bgcolor, 20%)
+
+  if $title-tag
+    > {selector($title-tag)}
+      display: inline-table
+      vertical-align: middle
+      margin: 0
+      font-size: 1.25rem
+
+    if $right-align
+      > *:not({selector($title-tag)})
+        float: right
+  else
+    if $right-align
+      > *
+        float: right
+

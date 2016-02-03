@@ -2,18 +2,22 @@
 
 sm-init()
 
+header
+  & nav
+    sm-navbar()
+
 main
   sm-container()
 
-  section.chip-section
+  section#chip-section
     & .chip
       sm-chip()
 
-  section.flow-text-section
+  section#flow-text-section
     & p
       sm-flow-text()
 
-  section.buttons-section
+  section#buttons-section
     & button
       margin 1rem
       &.default
@@ -25,7 +29,7 @@ main
       &.disc
         sm-button-disc()
 
-  section.cards-section
+  section#cards-section
     & .cards-list
       sm-columns(2)
     & article
@@ -38,11 +42,11 @@ main
       &.light
         sm-card($text-protection: white, $title-color: black)
 
-  section.collection-section
+  section#collection-section
     & ul
       sm-collection($img-circle: true)
 
-  section.horizontal-list-section
+  section#horizontal-list-section
     & ul
       sm-horizontal-list('—')
 

@@ -77,6 +77,54 @@ h6 {
   line-height: 110%;
   margin: 0.5rem 0 0.4rem 0;
 }
+header nav {
+  *zoom: 1;
+  position: relative;
+  color: #fff;
+  background-color: #3f51b5;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16), 0 1px 9px 0 rgba(0,0,0,0.13);
+  padding-left: 5%;
+  padding-right: 5%;
+}
+header nav:before,
+header nav:after {
+  content: " ";
+  display: table;
+}
+header nav:after {
+  clear: both;
+}
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  header nav {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  header nav {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+header nav > * {
+  color: #fff;
+  padding: 8px;
+}
+header nav > a:hover {
+  background-color: #4d5fc1;
+}
+header nav > a:active {
+  background-color: #6171c8;
+}
+header nav > h1 {
+  display: inline-table;
+  vertical-align: middle;
+  margin: 0;
+  font-size: 1.25rem;
+}
+header nav > *:not(h1) {
+  float: right;
+}
 main {
   padding-left: 5%;
   padding-right: 5%;
@@ -93,7 +141,7 @@ main {
     padding-right: 15%;
   }
 }
-main section.chip-section .chip {
+main section#chip-section .chip {
   display: inline-block;
   height: 32px;
   font-size: 12.8px;
@@ -104,7 +152,7 @@ main section.chip-section .chip {
   padding: 0 12px;
   border-radius: 16px;
 }
-main section.chip-section .chip img {
+main section#chip-section .chip img {
   float: left;
   margin: 0 8px 0 -12px;
   overflow: hidden;
@@ -115,130 +163,130 @@ main section.chip-section .chip img {
   padding: 0;
   vertical-align: middle;
 }
-main section.chip-section .chip i.material-icons {
+main section#chip-section .chip i.material-icons {
   cursor: pointer;
   float: right;
   font-size: 16px;
   line-height: 32px;
   padding-left: 8px;
 }
-main section.flow-text-section p {
+main section#flow-text-section p {
   font-weight: 300;
 }
 @media only screen and (min-width: 360px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.2rem;
   }
 }
 @media only screen and (min-width: 390px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.224rem;
   }
 }
 @media only screen and (min-width: 420px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.248rem;
   }
 }
 @media only screen and (min-width: 450px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.272rem;
   }
 }
 @media only screen and (min-width: 480px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.296rem;
   }
 }
 @media only screen and (min-width: 510px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.32rem;
   }
 }
 @media only screen and (min-width: 540px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.344rem;
   }
 }
 @media only screen and (min-width: 570px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.368rem;
   }
 }
 @media only screen and (min-width: 600px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.392rem;
   }
 }
 @media only screen and (min-width: 630px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.416rem;
   }
 }
 @media only screen and (min-width: 660px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.44rem;
   }
 }
 @media only screen and (min-width: 690px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.464rem;
   }
 }
 @media only screen and (min-width: 720px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.488rem;
   }
 }
 @media only screen and (min-width: 750px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.512rem;
   }
 }
 @media only screen and (min-width: 780px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.536rem;
   }
 }
 @media only screen and (min-width: 810px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.56rem;
   }
 }
 @media only screen and (min-width: 840px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.584rem;
   }
 }
 @media only screen and (min-width: 870px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.608rem;
   }
 }
 @media only screen and (min-width: 900px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.632rem;
   }
 }
 @media only screen and (min-width: 930px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.656rem;
   }
 }
 @media only screen and (min-width: 960px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.68rem;
   }
 }
 @media only screen and (max-width: 360px) {
-  main section.flow-text-section p {
+  main section#flow-text-section p {
     font-size: 1.2rem;
   }
 }
-main section.buttons-section button {
+main section#buttons-section button {
   margin: 1rem;
 }
-main section.buttons-section button.default {
+main section#buttons-section button.default {
   color: #fff;
   background-color: #ff5622;
   font-size: 1.3rem;
@@ -259,25 +307,25 @@ main section.buttons-section button.default {
   -webkit-tap-highlight-color: transparent;
   transition: 0.2s ease-out;
 }
-main section.buttons-section button.default:hover {
+main section#buttons-section button.default:hover {
   background-color: #ff5e2d;
   box-shadow: 0 4.5px 9px 0 rgba(0,0,0,0.195), 0 5px 17px 0 rgba(0,0,0,0.145);
 }
-main section.buttons-section button.default:active {
+main section#buttons-section button.default:active {
   background-color: #ff4b14;
   box-shadow: 0 7px 12px 0 rgba(0,0,0,0.22), 0 9px 25px 0 rgba(0,0,0,0.16);
 }
-main section.buttons-section button.default:disabled {
+main section#buttons-section button.default:disabled {
   background-color: #dfdfdf;
   box-shadow: none;
   color: #9f9f9f;
   cursor: default;
 }
-main section.buttons-section button.default:disabled:hover {
+main section#buttons-section button.default:disabled:hover {
   background-color: #dfdfdf;
   color: #9f9f9f;
 }
-main section.buttons-section button.flat {
+main section#buttons-section button.flat {
   color: #202020;
   background-color: transparent;
   font-size: 1.3rem;
@@ -298,25 +346,25 @@ main section.buttons-section button.flat {
   -webkit-tap-highlight-color: transparent;
   transition: 0.2s ease-out;
 }
-main section.buttons-section button.flat:hover {
+main section#buttons-section button.flat:hover {
   background-color: transparent;
   box-shadow: none !important;
 }
-main section.buttons-section button.flat:active {
+main section#buttons-section button.flat:active {
   background-color: #eee;
   box-shadow: none !important;
 }
-main section.buttons-section button.flat:disabled {
+main section#buttons-section button.flat:disabled {
   background-color: transparent;
   box-shadow: none;
   color: #9f9f9f;
   cursor: default;
 }
-main section.buttons-section button.flat:disabled:hover {
+main section#buttons-section button.flat:disabled:hover {
   background-color: transparent;
   color: #9f9f9f;
 }
-main section.buttons-section button.large {
+main section#buttons-section button.large {
   color: #fff;
   background-color: #ff5622;
   font-size: 1.6rem;
@@ -337,25 +385,25 @@ main section.buttons-section button.large {
   -webkit-tap-highlight-color: transparent;
   transition: 0.2s ease-out;
 }
-main section.buttons-section button.large:hover {
+main section#buttons-section button.large:hover {
   background-color: #ff5e2d;
   box-shadow: 0 4.5px 9px 0 rgba(0,0,0,0.195), 0 5px 17px 0 rgba(0,0,0,0.145);
 }
-main section.buttons-section button.large:active {
+main section#buttons-section button.large:active {
   background-color: #ff4b14;
   box-shadow: 0 7px 12px 0 rgba(0,0,0,0.22), 0 9px 25px 0 rgba(0,0,0,0.16);
 }
-main section.buttons-section button.large:disabled {
+main section#buttons-section button.large:disabled {
   background-color: #dfdfdf;
   box-shadow: none;
   color: #9f9f9f;
   cursor: default;
 }
-main section.buttons-section button.large:disabled:hover {
+main section#buttons-section button.large:disabled:hover {
   background-color: #dfdfdf;
   color: #9f9f9f;
 }
-main section.buttons-section button.disc {
+main section#buttons-section button.disc {
   position: relative;
   color: #fff;
   background-color: #ff5622;
@@ -384,48 +432,48 @@ main section.buttons-section button.disc {
   padding: 0;
   vertical-align: middle;
 }
-main section.buttons-section button.disc:hover {
+main section#buttons-section button.disc:hover {
   background-color: #ff5e2d;
   box-shadow: 0 4.5px 9px 0 rgba(0,0,0,0.195), 0 5px 17px 0 rgba(0,0,0,0.145);
 }
-main section.buttons-section button.disc:active {
+main section#buttons-section button.disc:active {
   background-color: #ff4b14;
   box-shadow: 0 7px 12px 0 rgba(0,0,0,0.22), 0 9px 25px 0 rgba(0,0,0,0.16);
 }
-main section.buttons-section button.disc:disabled {
+main section#buttons-section button.disc:disabled {
   background-color: #dfdfdf;
   box-shadow: none;
   color: #9f9f9f;
   cursor: default;
 }
-main section.buttons-section button.disc:disabled:hover {
+main section#buttons-section button.disc:disabled:hover {
   background-color: #dfdfdf;
   color: #9f9f9f;
 }
-main section.cards-section .cards-list {
+main section#cards-section .cards-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-main section.cards-section .cards-list > * {
+main section#cards-section .cards-list > * {
   margin-top: 0.5rem;
 }
 @media only screen and (max-width: 600px) {
-  main section.cards-section .cards-list > * {
+  main section#cards-section .cards-list > * {
     width: 99%;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  main section.cards-section .cards-list > * {
+  main section#cards-section .cards-list > * {
     width: 99%;
   }
 }
 @media only screen and (min-width: 993px) {
-  main section.cards-section .cards-list > * {
+  main section#cards-section .cards-list > * {
     width: 49%;
   }
 }
-main section.cards-section article.default {
+main section#cards-section article.default {
   position: relative;
   background-color: #fff;
   transition: box-shadow 0.25s;
@@ -434,11 +482,11 @@ main section.cards-section article.default {
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16), 0 1px 9px 0 rgba(0,0,0,0.13);
   overflow: hidden;
 }
-main section.cards-section article.default > * {
+main section#cards-section article.default > * {
   padding-left: 20px;
   padding-right: 20px;
 }
-main section.cards-section article.default > h1 {
+main section#cards-section article.default > h1 {
   color: #fff;
   font-size: 24px;
   font-weight: 300;
@@ -448,7 +496,7 @@ main section.cards-section article.default > h1 {
   height: 0;
   z-index: -1;
 }
-main section.cards-section article.default > h1:after {
+main section#cards-section article.default > h1:after {
   content: '';
   position: absolute;
   bottom: -36px;
@@ -459,7 +507,7 @@ main section.cards-section article.default > h1:after {
   pointer-events: none;
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.33) 66%, rgba(0,0,0,0.65) 100%);
 }
-main section.cards-section article.default > img {
+main section#cards-section article.default > img {
   position: relative;
   width: 100%;
   display: block;
@@ -467,7 +515,7 @@ main section.cards-section article.default > img {
   border-radius: 2px 2px 0 0;
   z-index: -1;
 }
-main section.cards-section article.title-below-image {
+main section#cards-section article.title-below-image {
   position: relative;
   background-color: #fff;
   transition: box-shadow 0.25s;
@@ -476,16 +524,16 @@ main section.cards-section article.title-below-image {
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16), 0 1px 9px 0 rgba(0,0,0,0.13);
   overflow: hidden;
 }
-main section.cards-section article.title-below-image > * {
+main section#cards-section article.title-below-image > * {
   padding-left: 20px;
   padding-right: 20px;
 }
-main section.cards-section article.title-below-image > h1 {
+main section#cards-section article.title-below-image > h1 {
   color: #202020;
   font-size: 24px;
   font-weight: 300;
 }
-main section.cards-section article.title-below-image > img {
+main section#cards-section article.title-below-image > img {
   position: relative;
   width: 100%;
   display: block;
@@ -493,7 +541,7 @@ main section.cards-section article.title-below-image > img {
   border-radius: 2px 2px 0 0;
   z-index: -1;
 }
-main section.cards-section article.green {
+main section#cards-section article.green {
   position: relative;
   background-color: #fff;
   transition: box-shadow 0.25s;
@@ -502,11 +550,11 @@ main section.cards-section article.green {
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16), 0 1px 9px 0 rgba(0,0,0,0.13);
   overflow: hidden;
 }
-main section.cards-section article.green > * {
+main section#cards-section article.green > * {
   padding-left: 20px;
   padding-right: 20px;
 }
-main section.cards-section article.green > h1 {
+main section#cards-section article.green > h1 {
   color: #fff;
   font-size: 24px;
   font-weight: 300;
@@ -516,7 +564,7 @@ main section.cards-section article.green > h1 {
   height: 0;
   z-index: -1;
 }
-main section.cards-section article.green > h1:after {
+main section#cards-section article.green > h1:after {
   content: '';
   position: absolute;
   bottom: -36px;
@@ -527,7 +575,7 @@ main section.cards-section article.green > h1:after {
   pointer-events: none;
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,100,0,0.33) 66%, rgba(0,100,0,0.65) 100%);
 }
-main section.cards-section article.green > img {
+main section#cards-section article.green > img {
   position: relative;
   width: 100%;
   display: block;
@@ -535,7 +583,7 @@ main section.cards-section article.green > img {
   border-radius: 2px 2px 0 0;
   z-index: -1;
 }
-main section.cards-section article.light {
+main section#cards-section article.light {
   position: relative;
   background-color: #fff;
   transition: box-shadow 0.25s;
@@ -544,11 +592,11 @@ main section.cards-section article.light {
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16), 0 1px 9px 0 rgba(0,0,0,0.13);
   overflow: hidden;
 }
-main section.cards-section article.light > * {
+main section#cards-section article.light > * {
   padding-left: 20px;
   padding-right: 20px;
 }
-main section.cards-section article.light > h1 {
+main section#cards-section article.light > h1 {
   color: #000;
   font-size: 24px;
   font-weight: 300;
@@ -558,7 +606,7 @@ main section.cards-section article.light > h1 {
   height: 0;
   z-index: -1;
 }
-main section.cards-section article.light > h1:after {
+main section#cards-section article.light > h1:after {
   content: '';
   position: absolute;
   bottom: -36px;
@@ -569,7 +617,7 @@ main section.cards-section article.light > h1:after {
   pointer-events: none;
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(255,255,255,0.33) 66%, rgba(255,255,255,0.65) 100%);
 }
-main section.cards-section article.light > img {
+main section#cards-section article.light > img {
   position: relative;
   width: 100%;
   display: block;
@@ -577,13 +625,13 @@ main section.cards-section article.light > img {
   border-radius: 2px 2px 0 0;
   z-index: -1;
 }
-main section.collection-section ul {
+main section#collection-section ul {
   border: 1px solid #e0e0e0;
   border-radius: 2px;
   overflow: hidden;
   position: relative;
 }
-main section.collection-section ul > * {
+main section#collection-section ul > * {
   display: block;
   background-color: #fff;
   line-height: 1.5rem;
@@ -592,18 +640,18 @@ main section.collection-section ul > * {
   transition: 0.25s;
   position: relative;
 }
-main section.collection-section ul > *:last-child {
+main section#collection-section ul > *:last-child {
   border-bottom: none;
 }
-main section.collection-section ul > *:active {
+main section#collection-section ul > *:active {
   background-color: #a6afe0;
   color: #3f51b5;
 }
-main section.collection-section ul > *:hover {
+main section#collection-section ul > *:hover {
   color: #3f51b5;
   background-color: #c4caea;
 }
-main section.collection-section ul > * img {
+main section#collection-section ul > * img {
   position: absolute;
   left: 20px;
   top: 5px;
@@ -617,34 +665,34 @@ main section.collection-section ul > * img {
   padding: 0;
   vertical-align: middle;
 }
-main section.collection-section ul > * p {
+main section#collection-section ul > * p {
   position: relative;
   padding-left: 41px;
   margin: 0;
   min-height: 24px;
 }
-main section.collection-section ul > h4 {
+main section#collection-section ul > h4 {
   padding: 30px 20px;
   margin: 0;
 }
-main section.collection-section ul > h4 ~ *:not(h4) {
+main section#collection-section ul > h4 ~ *:not(h4) {
   padding-left: 30px;
 }
-main section.collection-section ul > h4 ~ *:not(h4) > img {
+main section#collection-section ul > h4 ~ *:not(h4) > img {
   left: 30px;
 }
-main section.horizontal-list-section ul {
+main section#horizontal-list-section ul {
   list-style: none;
 }
-main section.horizontal-list-section ul > li {
+main section#horizontal-list-section ul > * {
   display: inline-block;
 }
-main section.horizontal-list-section ul > li:before {
+main section#horizontal-list-section ul > *:before {
   content: '—';
   vertical-align: top;
   margin: 0 10px 0 8px;
 }
-main section.horizontal-list-section ul > li:first-child:before {
+main section#horizontal-list-section ul > *:first-child:before {
   display: none;
 }
 footer {
