@@ -20,11 +20,12 @@ sm-footer($copyright = "small", $bg-color = $primary-color, $color = $light-text
     & > *
       sm-container()
 
-  & {selector($copyright)}
-    display: block
-    overflow: hidden
-    height: 50px
-    line-height: 50px
-    color: rgba(255,255,255,.8)
-    font-weight: 300
-    background-color: rgba(51,51,51,.2)
+  if $copyright
+    & {selector($copyright)}
+      display: block
+      overflow: hidden
+      height: 50px
+      line-height: 50px
+      color: rgba(255,255,255,.8)
+      font-weight: 300
+      background-color: rgba(51,51,51,.2)
