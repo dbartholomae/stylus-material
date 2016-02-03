@@ -1,0 +1,33 @@
+@require "./styles"
+
+// Mixin: Chip
+//
+// Create a chip, optionally with including an image. See example for defaults
+//
+// ex. sm-chip($height: 32px, $fontsize: $height / 2.5, $color: rgba(0,0,0,.6), $bg-color: #e4e4e4,
+//         $img-tag: "img", $icon-tag: "i.material-icons"
+//       )
+sm-chip($height = 32px, $fontsize = $height / 2.5, $color = rgba(0,0,0,.6), $bg-color = #e4e4e4,
+      $img-tag = "img", $icon-tag = "i.material-icons"
+    )
+  display: inline-block
+  height: $height
+  font-size: $fontsize
+  font-weight: 500
+  color: $color
+  background-color: $bg-color
+  line-height: $height
+  padding: 0 12px
+  border-radius: ($height / 2)
+
+  {selector($img-tag)}
+    float: left
+    margin: 0 8px 0 -12px
+    sm-circle: $height
+
+  {selector($icon-tag)}
+    cursor: pointer
+    float: right
+    font-size: ($height/2)
+    line-height: $height
+    padding-left: 8px
