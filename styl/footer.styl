@@ -1,0 +1,30 @@
+@require "variables"
+@require "grid"
+
+// Mixin: Footer
+//
+// Create a colored footer element.
+//
+// ex. sm-footer($copyright = "small", $bg-color = $primary-color, $color = $light-text-color,
+//           $margin-top = 20px, $padding-top = 20px, $use-container = true
+//         )
+sm-footer($copyright = "small", $bg-color = $primary-color, $color = $light-text-color,
+      $margin-top = 20px, $padding-top = 20px, $use-container = true
+    )
+  margin-top: $margin-top
+  padding-top: $padding-top
+  background-color: $bg-color
+  color: $color
+
+  if $use-container
+    & > *
+      sm-container()
+
+  & {selector($copyright)}
+    display: block
+    overflow: hidden
+    height: 50px
+    line-height: 50px
+    color: rgba(255,255,255,.8)
+    font-weight: 300
+    background-color: rgba(51,51,51,.2)

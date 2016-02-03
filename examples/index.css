@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  min-height: 100vh;
 }
 ul {
   list-style-type: none;
@@ -77,18 +78,19 @@ h6 {
   margin: 0.5rem 0 0.4rem 0;
 }
 main {
-  margin: 0 auto;
-  max-width: 1280px;
-  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
   main {
-    width: 85%;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
   }
 }
 @media only screen and (min-width: 993px) {
   main {
-    width: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
   }
 }
 main section.chip-section .chip {
@@ -631,29 +633,48 @@ main section.collection-section ul > h4 ~ *:not(h4) {
 main section.collection-section ul > h4 ~ *:not(h4) > img {
   left: 30px;
 }
-footer {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  color: #fff;
-  background-color: #3f51b5;
-  padding: 8px;
-  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16), 0 1px 9px 0 rgba(0,0,0,0.13);
-}
-footer > * {
-  margin: 0;
-}
-footer ul {
+main section.horizontal-list-section ul {
   list-style: none;
 }
-footer ul > li {
+main section.horizontal-list-section ul > li {
   display: inline-block;
 }
-footer ul > li:before {
+main section.horizontal-list-section ul > li:before {
   content: '—';
   vertical-align: top;
   margin: 0 10px 0 8px;
 }
-footer ul > li:first-child:before {
+main section.horizontal-list-section ul > li:first-child:before {
   display: none;
+}
+footer {
+  margin-top: 20px;
+  padding-top: 20px;
+  background-color: #3f51b5;
+  color: #fff;
+}
+footer > * {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  footer > * {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  footer > * {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+footer small {
+  display: block;
+  overflow: hidden;
+  height: 50px;
+  line-height: 50px;
+  color: rgba(255,255,255,0.8);
+  font-weight: 300;
+  background-color: rgba(51,51,51,0.2);
 }
