@@ -1,8 +1,15 @@
 @require "./variables"
 
+// Mixin: Init
+//
+// Initializes styles across the document. See example for default
+//
+// ex. sm-init($init-ul = true, $init-font = "Roboto", $h1-fontsize = 4.2rem, $h2-fontsize = 3.56rem,
+//         $h3-fontsize = 2.92rem, $h4-fontsize = 2.28rem, $h5-fontsize = 1.64rem, $h6-fontsize = 1rem
+//       )
 sm-init($init-ul = true, $init-font = "Roboto", $h1-fontsize = 4.2rem, $h2-fontsize = 3.56rem,
-  $h3-fontsize = 2.92rem, $h4-fontsize = 2.28rem, $h5-fontsize = 1.64rem, $h6-fontsize = 1rem
-)
+    $h3-fontsize = 2.92rem, $h4-fontsize = 2.28rem, $h5-fontsize = 1.64rem, $h6-fontsize = 1rem
+  )
   body
     margin 0
 

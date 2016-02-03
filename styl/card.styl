@@ -12,12 +12,12 @@
 // ex. sm-card($bgcolor: $background-color, $title-in-image: true, $text-protection: #000,
 //        $title-size: 24px,
 //        $title-color: ($title-in-image ? $light-text-color : $primary-text-color),
-//        $padding: 20px, $title-tag: h1, $img-tag: img
+//        $padding: 20px, $title-tag: "h1", $img-tag: "img"
 //     )
 sm-card($bgcolor = $background-color, $title-in-image = true, $text-protection = #000,
     $title-size = 24px,
     $title-color = ($title-in-image ? $light-text-color : $primary-text-color),
-    $padding = 20px, $title-tag = h1, $img-tag = img
+    $padding = 20px, $title-tag = "h1", $img-tag = "img"
     )
   position: relative
   background-color: $bgcolor
@@ -32,7 +32,7 @@ sm-card($bgcolor = $background-color, $title-in-image = true, $text-protection =
     padding-left: $padding
     padding-right: $padding
 
-  > {$title-tag}
+  > {selector($title-tag)}
     color: $title-color
     font-size: $title-size
     font-weight: 300
@@ -56,7 +56,7 @@ sm-card($bgcolor = $background-color, $title-in-image = true, $text-protection =
           background: linear-gradient(to bottom,
             rgba(0,0,0,0) 0%, alpha($text-protection,0.33) 66%, alpha($text-protection,0.65) 100%)
 
-  > {$img-tag}
+  > {selector($img-tag)}
     position: relative
     width: 100%
     display: block

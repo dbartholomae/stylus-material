@@ -2,17 +2,17 @@
 //
 // Create a collection of content rows. Example shows defaults.
 //
-// ex. sm-collection($border-color = #e0e0e0, $list-selector = li, $bg-color = $background-color,
-//        $active-color = $primary-color, $active-bg-color = lighten($active-color, 55%),
-//        $hover = true, $hover-color = $primary-color, $hover-bg-color = lighten($primary-color, 70%),
-//        $title-tag = h4, $img-tag = img, $img-size = 34px, $img-circle = false, $vertical-padding = 20px,
-//        $content-tag = p
+// ex. sm-collection($border-color: #e0e0e0, $list-selector: li, $bg-color: $background-color,
+//        $active-color: $primary-color, $active-bg-color: lighten($active-color, 55%),
+//        $hover: true, $hover-color: $primary-color, $hover-bg-color: lighten($primary-color, 70%),
+//        $title-tag: "h4", $img-tag: "img", $img-size: 34px, $img-circle: false, $vertical-padding: 20px,
+//        $content-tag: "p"
 //      )
 sm-collection($border-color = #e0e0e0, $list-selector = li, $bg-color = $background-color,
     $active-color = $primary-color, $active-bg-color = lighten($active-color, 55%),
     $hover = true, $hover-color = $primary-color, $hover-bg-color = lighten($primary-color, 70%),
-    $title-tag = h4, $img-tag = img, $img-size = 34px, $img-circle = false, $vertical-padding = 20px,
-    $content-tag = p
+    $title-tag = "h4", $img-tag = "img", $img-size = 34px, $img-circle = false, $vertical-padding = 20px,
+    $content-tag = "p"
   )
   border: 1px solid $border-color
   border-radius: 2px
@@ -41,7 +41,7 @@ sm-collection($border-color = #e0e0e0, $list-selector = li, $bg-color = $backgro
 
     if $img-tag
       position: relative
-      & {$img-tag}
+      & {selector($img-tag)}
         position: absolute
         left: 20px
         top: 5px
@@ -49,20 +49,20 @@ sm-collection($border-color = #e0e0e0, $list-selector = li, $bg-color = $backgro
         height: $img-size
         if $img-circle
           sm-circle($img-size)
-      & {$content-tag}
+      & {selector($content-tag)}
         position: relative
         padding-left: $img-size + 7px
         margin: 0
         min-height: $img-size + 10px - $vertical-padding
 
   if $title-tag
-    > {$title-tag}
+    > {selector($title-tag)}
       padding: 30px 20px
       margin: 0
 
-    > {$title-tag} ~ *:not({$title-tag})
+    > {selector($title-tag)} ~ *:not({selector($title-tag)})
       padding-left: 30px
 
     if $img-tag
-      > {$title-tag} ~ *:not({$title-tag}) > {$img-tag}
+      > {selector($title-tag)} ~ *:not({selector($title-tag)}) > {selector($img-tag)}
         left: 30px
