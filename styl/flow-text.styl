@@ -1,0 +1,20 @@
+@require "./variables"
+
+// Mixin: Flow text
+//
+// Automatically resize text for optimal legibility. See example for defaults
+//
+// ex. sm-flow-text($intervals = 20, $range = $large-screen - $small-screen,
+//         $interval-size = $range / $intervals
+//       )
+sm-flow-text($intervals = 20, $range = $large-screen - $small-screen,
+      $interval-size = $range / $intervals
+    )
+  font-weight: 300
+  for $i in (0..$intervals)
+    @media only screen and (min-width : 360 + ($i * $interval-size))
+      font-size: 1.2rem * (1 + (.02 * $i));
+
+  // Handle below 360px screen
+  @media only screen and (max-width: 360px)
+    font-size: 1.2rem

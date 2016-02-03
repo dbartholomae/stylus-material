@@ -91,6 +91,119 @@ main {
     width: 70%;
   }
 }
+main section.flow-text-section p {
+  font-weight: 300;
+}
+@media only screen and (min-width: 360px) {
+  main section.flow-text-section p {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 390px) {
+  main section.flow-text-section p {
+    font-size: 1.224rem;
+  }
+}
+@media only screen and (min-width: 420px) {
+  main section.flow-text-section p {
+    font-size: 1.248rem;
+  }
+}
+@media only screen and (min-width: 450px) {
+  main section.flow-text-section p {
+    font-size: 1.272rem;
+  }
+}
+@media only screen and (min-width: 480px) {
+  main section.flow-text-section p {
+    font-size: 1.296rem;
+  }
+}
+@media only screen and (min-width: 510px) {
+  main section.flow-text-section p {
+    font-size: 1.32rem;
+  }
+}
+@media only screen and (min-width: 540px) {
+  main section.flow-text-section p {
+    font-size: 1.344rem;
+  }
+}
+@media only screen and (min-width: 570px) {
+  main section.flow-text-section p {
+    font-size: 1.368rem;
+  }
+}
+@media only screen and (min-width: 600px) {
+  main section.flow-text-section p {
+    font-size: 1.392rem;
+  }
+}
+@media only screen and (min-width: 630px) {
+  main section.flow-text-section p {
+    font-size: 1.416rem;
+  }
+}
+@media only screen and (min-width: 660px) {
+  main section.flow-text-section p {
+    font-size: 1.44rem;
+  }
+}
+@media only screen and (min-width: 690px) {
+  main section.flow-text-section p {
+    font-size: 1.464rem;
+  }
+}
+@media only screen and (min-width: 720px) {
+  main section.flow-text-section p {
+    font-size: 1.488rem;
+  }
+}
+@media only screen and (min-width: 750px) {
+  main section.flow-text-section p {
+    font-size: 1.512rem;
+  }
+}
+@media only screen and (min-width: 780px) {
+  main section.flow-text-section p {
+    font-size: 1.536rem;
+  }
+}
+@media only screen and (min-width: 810px) {
+  main section.flow-text-section p {
+    font-size: 1.56rem;
+  }
+}
+@media only screen and (min-width: 840px) {
+  main section.flow-text-section p {
+    font-size: 1.584rem;
+  }
+}
+@media only screen and (min-width: 870px) {
+  main section.flow-text-section p {
+    font-size: 1.608rem;
+  }
+}
+@media only screen and (min-width: 900px) {
+  main section.flow-text-section p {
+    font-size: 1.632rem;
+  }
+}
+@media only screen and (min-width: 930px) {
+  main section.flow-text-section p {
+    font-size: 1.656rem;
+  }
+}
+@media only screen and (min-width: 960px) {
+  main section.flow-text-section p {
+    font-size: 1.68rem;
+  }
+}
+@media only screen and (max-width: 360px) {
+  main section.flow-text-section p {
+    font-size: 1.2rem;
+  }
+}
 main section.buttons-section button {
   margin: 1rem;
 }
