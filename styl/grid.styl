@@ -3,18 +3,23 @@
 
 // Mixin: Container
 //
-// Centers the content horizontally and sets a maximum width based on breakpoints.
+// Centers the content horizontally and sets a maximum width based on breakpoints. Based on padding.
 //
-// ex. sm-container()
-sm-container()
-  margin: 0 auto
-  max-width: 1280px
-  width: 90%
+// ex. sm-container($large-padding: 15%, $medium-padding: ($large-padding/2),
+//         $small-padding: ($large-padding/3)
+//       )
+sm-container($large-padding = 15%, $medium-padding = ($large-padding/2),
+      $small-padding = ($large-padding/3)
+    )
+  padding-left: $small-padding
+  padding-right: $small-padding
 
   @media $medium-only
-    width: 85%
+    padding-left: $medium-padding
+    padding-right: $medium-padding
   @media $large-and-up
-    width: 70%
+    padding-left: $large-padding
+    padding-right: $large-padding
 
 // Mixin: Columns
 //
