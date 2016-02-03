@@ -8,6 +8,7 @@
 // $text-protection will be applied to the bottom $title-size * 4 pixels of the image.
 // If the image isn't tall enough, $text-protection has to be disabled manually.
 // Currently only one-line-titles are supported if the title is overlayed over the image.
+// If there are any problems with the z-index, disable text protection.
 //
 // ex. sm-card($bgcolor: $background-color, $title-in-image: true, $text-protection: #000,
 //        $title-size: 24px,
@@ -62,4 +63,5 @@ sm-card($bgcolor = $background-color, $title-in-image = true, $text-protection =
     display: block
     padding: 0
     border-radius: 2px 2px 0 0
-    z-index: -1
+    if $text-protection
+      z-index: -1
