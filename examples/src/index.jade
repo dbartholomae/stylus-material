@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    link(rel="stylesheet" href="index.css")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,400italic,500,700,900' rel='stylesheet' type='text/css')
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    title Showcase
+  body
+    header.main
+      nav
+        h1 Stylus Material
+        a(href="#navbar") Navbar
+        a(href="#cards") Cards
+        a(href="#chips") Chips
+        a(href="#flow-text") Flow text
+        a(href="#buttons") Buttons
+        a(href="#collection") Collection
+        a(href="#horizontal-list") Horizontal lists
+        a(href="#footer") Footer
+    main
+      include ./components/cards.jade
+      include ./components/chips.jade
+      include ./components/flow-text.jade
+      include ./components/buttons.jade
+      include ./components/collection.jade
+      include ./components/horizontal-list.jade
+      include ./components/footer.jade
+      include ./components/navbar.jade

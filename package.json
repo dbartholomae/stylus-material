@@ -6,13 +6,14 @@
   "license": "MIT",
   "main": "styl/index.styl",
   "scripts": {
-    "build": "stylus examples",
+    "build": "stylus examples && jade examples/src/index.jade --out examples --pretty",
     "size": "gzipped examples/index.css",
-    "dev": "nodemon --ext styl --watch examples/ --watch styl/ --exec npm run build"
+    "dev": "nodemon --ext styl,jade --watch examples/ --watch styl/ --exec npm run build"
   },
   "devDependencies": {
     "stylus": "0.53.0",
     "nodemon": "1.8.1",
+    "jade": "1.11.0",
     "gzipped": "0.0.5"
   },
   "repository": {
