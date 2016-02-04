@@ -1,0 +1,18 @@
+// Mixin: View
+// Creates a view. Has to be set on multiple elements that are children of the same element.
+// Each element has to have a unqiue id and will be visible when the anchor is part of the url.
+// The last element will be displayed by default.
+//
+// ex. sm-view()
+// Based on https://www.smashingmagazine.com/2015/12/reimagining-single-page-applications-progressive-enhancement/
+sm-view()
+  display: none
+
+  &:last-of-type
+    display: block
+
+  &:target
+    display: block
+
+  &:target ~ *
+    display: none
