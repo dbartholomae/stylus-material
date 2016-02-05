@@ -1,6 +1,12 @@
-@require "../styl"
+@require "../"
 
 sm-init()
+
+p
+  sm-flow-text()
+
+ol > li
+  sm-flow-text()
 
 header.main
   & nav
@@ -8,6 +14,22 @@ header.main
 
 main
   sm-container()
+
+  article
+    sm-z: 1
+    margin: 1rem
+    padding: 1rem
+    > h1
+      font-size: 2.9 rem
+
+  pre
+    &:before
+      visibility: hidden
+    &:after
+      visibility: hidden
+
+  .codes
+    sm-columns(2, 1, 1)
 
   section
     sm-view()
