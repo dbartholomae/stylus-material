@@ -1,111 +1,108 @@
 section#buttons
-  h1 Buttons
-  article
-    h1 Default button
-    button.default Default button
-    .codes
-      .code
-        h4 HTML
-        pre: code.language-markup
-          = '<button>\n'
-          = '  Default button\n'
-          = '</button>'
-      .code
-        h4 Stylus
-        pre: code.language-stylus.
-          button
-            sm-button()
-      .code
-        h4 Class based
-        pre: code.language-markup
-          = '<button class="button">\n'
-          = '  Default button\n'
-          = '</button>'
-      .code
-        h4 Tag based
-        pre: code.language-markup
-          = '<button>\n'
-          = '  Default button\n'
-          = '</button>'
-    h4 With all options
-    pre: code.language-stylus.
-      sm-button($bgcolor: $accent-color, $color: $light-text-color,$font-size: 1.3rem,
-        $hover-bgcolor: ($bgcolor == transparent ? transparent : lighten($bgcolor, 5%)),
-        $disabled-bgcolor: ($bgcolor == transparent ? transparent : #DFDFDF),
-        $disabled-color: #9F9F9F, $height: 36px, $padding: 0 2rem,
-        $border: none, $border-radius: 2px, $z = 1)
+  .headline-wrapper
+    h1 Buttons
+  h2 Default button
+  button.default Default button
+  .codes
+    .code
+      h4 HTML
+      pre: code.language-markup
+        = '<button>\n'
+        = '  Default button\n'
+        = '</button>'
+    .code
+      h4 Stylus
+      pre: code.language-stylus.
+        button
+          sm-button()
+    .code
+      h4 Class based
+      pre: code.language-markup
+        = '<button class="button">\n'
+        = '  Default button\n'
+        = '</button>'
+    .code
+      h4 Tag based
+      pre: code.language-markup
+        = '<button>\n'
+        = '  Default button\n'
+        = '</button>'
+  h4 With all options
+  pre: code.language-stylus.
+    sm-button($bgcolor: $accent-color, $color: $light-text-color,$font-size: 1.3rem,
+      $hover-bgcolor: ($bgcolor == transparent ? transparent : lighten($bgcolor, 5%)),
+      $disabled-bgcolor: ($bgcolor == transparent ? transparent : #DFDFDF),
+      $disabled-color: #9F9F9F, $height: 36px, $padding: 0 2rem,
+      $border: none, $border-radius: 2px, $z = 1)
 
-  article
-    h1 Flat button
-    button.flat Flat button
-    .codes
-      .code
-        h4 HTML
-        pre: code.language-markup
-          = '<button>\n'
-          = '  Flat button\n'
-          = '</button>'
-      .code
-        h4 Stylus
-        pre: code.language-stylus.
-          button
-            sm-button-flat()
-      .code
-        h4 Class based
-        pre: code.language-markup
-          = '<button class="button flat">\n'
-          = '  Flat button\n'
-          = '</button>'
-      .code
-        h4 Tag based
-        p Not possible
+  h2 Flat button
+  button.flat Flat button
+  .codes
+    .code
+      h4 HTML
+      pre: code.language-markup
+        = '<button>\n'
+        = '  Flat button\n'
+        = '</button>'
+    .code
+      h4 Stylus
+      pre: code.language-stylus.
+        button
+          sm-button-flat()
+    .code
+      h4 Class based
+      pre: code.language-markup
+        = '<button class="button flat">\n'
+        = '  Flat button\n'
+        = '</button>'
+    .code
+      h4 Tag based
+      p Not possible
 
-  article
-    h1 Large button
-    button.large Large button
-    .codes
-      .code
-        h4 HTML
-        pre: code.language-markup
-          = '<button>\n'
-          = '  Large button\n'
-          = '</button>'
-      .code
-        h4 Stylus
-        pre: code.language-stylus.
-          button
-            sm-button-large()
-      .code
-        h4 Class based
-        pre: code.language-markup
-          = '<button class="button large">\n'
-          = '  Large button\n'
-          = '</button>'
-      .code
-        h4 Tag based
-        p Not possible
+  h2 Large button
+  button.large Large button
+  .codes
+    .code
+      h4 HTML
+      pre: code.language-markup
+        = '<button>\n'
+        = '  Large button\n'
+        = '</button>'
+    .code
+      h4 Stylus
+      pre: code.language-stylus.
+        button
+          sm-button-large()
+    .code
+      h4 Class based
+      pre: code.language-markup
+        = '<button class="button large">\n'
+        = '  Large button\n'
+        = '</button>'
+    .code
+      h4 Tag based
+      p Not possible
 
-  article
-    h1 Disc button
-    button.disc !
-    .codes
-      .code
-        h4 HTML
-        pre: code.language-markup
-          = '<button>\n'
-          = '  !\n'
-          = '</button>'
-      .code
-        h4 Stylus
-        pre: code.language-stylus.
-          button
-            sm-button-disc()
-      .code
-        h4 Class based
-        pre: code.language-markup
-          = '<button class="button disc">\n'
-          = '  !\n'
-          = '</button>'
-      .code
-        h4 Tag based
-        p Not possible
+  h2 Disc button
+  button.disc !
+  .codes
+    .code
+      h4 HTML
+      pre: code.language-markup
+        = '<button>\n'
+        = '  !\n'
+        = '</button>'
+    .code
+      h4 Stylus
+      pre: code.language-stylus.
+        button
+          sm-button-disc()
+    .code
+      h4 Class based
+      pre: code.language-markup
+        = '<button class="button disc">\n'
+        = '  !\n'
+        = '</button>'
+    .code
+      h4 Tag based
+      p Not possible

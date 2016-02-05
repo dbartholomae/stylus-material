@@ -15,12 +15,14 @@
   <body>
     <header class="main">
       <nav>
-        <h1>Stylus Material</h1><a href="#basics">Basics</a><a href="#navbar">Navbar</a><a href="#cards">Cards</a><a href="#chips">Chips</a><a href="#flow-text">Flow text</a><a href="#buttons">Buttons</a><a href="#collection">Collection</a><a href="#horizontal-list">Horizontal lists</a><a href="#footer">Footer</a>
+        <h1>Stylus Material</h1><a href="#basics">Basics</a><a href="#navbar">Navbar</a><a href="#cards">Cards</a><a href="#chips">Chips</a><a href="#flow-text">Flow text</a><a href="#buttons">Buttons</a><a href="#collections">Collections</a><a href="#horizontal-list">Horizontal lists</a><a href="#footer">Footer</a>
       </nav>
     </header>
     <main>
       <section id="navbar">
-        <h1>Navbar</h1>
+        <div class="headline-wrapper">
+          <h1>Navbar</h1>
+        </div>
         <header>
           <nav>
             <h1>Title</h1><a>Entry 1</a><a>Entry 2</a><a>Entry 3</a>
@@ -28,7 +30,9 @@
         </header>
       </section>
       <section id="cards">
-        <h1>Cards and grid</h1>
+        <div class="headline-wrapper">
+          <h1>Cards and grid</h1>
+        </div>
         <div class="cards-list">
           <article class="default"><img src="assets/leaves.jpg">
             <h1>This title is overlayed</h1>
@@ -81,135 +85,136 @@
         </div>
       </section>
       <section id="chips">
-        <h1>Chips</h1>
+        <div class="headline-wrapper">
+          <h1>Chips</h1>
+        </div>
         <div class="chip"><img src="assets/leaves.jpg">A chip<i class="material-icons">close</i></div>
         <div class="chip">Another chip</div>
       </section>
       <section id="flow-text">
-        <h1>Flow text</h1>
+        <div class="headline-wrapper">
+          <h1>Flow text</h1>
+        </div>
         <p>This text is automatically resized based on screen size for optimal legibility.</p>
       </section>
       <section id="buttons">
-        <h1>Buttons</h1>
-        <article>
-          <h1>Default button</h1>
-          <button class="default">Default button</button>
-          <div class="codes">
-            <div class="code">
-              <h4>HTML</h4>
-              <pre><code class="language-markup">&lt;button&gt;
+        <div class="headline-wrapper">
+          <h1>Buttons</h1>
+        </div>
+        <h2>Default button</h2>
+        <button class="default">Default button</button>
+        <div class="codes">
+          <div class="code">
+            <h4>HTML</h4>
+            <pre><code class="language-markup">&lt;button&gt;
   Default button
 &lt;/button&gt;</code></pre>
-            </div>
-            <div class="code">
-              <h4>Stylus</h4>
-              <pre><code class="language-stylus">button
-  sm-button()</code></pre>
-            </div>
-            <div class="code">
-              <h4>Class based</h4>
-              <pre><code class="language-markup">&lt;button class=&quot;button&quot;&gt;
-  Default button
-&lt;/button&gt;</code></pre>
-            </div>
-            <div class="code">
-              <h4>Tag based</h4>
-              <pre><code class="language-markup">&lt;button&gt;
-  Default button
-&lt;/button&gt;</code></pre>
-            </div>
           </div>
-          <h4>With all options</h4>
-          <pre><code class="language-stylus">sm-button($bgcolor: $accent-color, $color: $light-text-color,$font-size: 1.3rem,
+          <div class="code">
+            <h4>Stylus</h4>
+            <pre><code class="language-stylus">button
+  sm-button()</code></pre>
+          </div>
+          <div class="code">
+            <h4>Class based</h4>
+            <pre><code class="language-markup">&lt;button class=&quot;button&quot;&gt;
+  Default button
+&lt;/button&gt;</code></pre>
+          </div>
+          <div class="code">
+            <h4>Tag based</h4>
+            <pre><code class="language-markup">&lt;button&gt;
+  Default button
+&lt;/button&gt;</code></pre>
+          </div>
+        </div>
+        <h4>With all options</h4>
+        <pre><code class="language-stylus">sm-button($bgcolor: $accent-color, $color: $light-text-color,$font-size: 1.3rem,
   $hover-bgcolor: ($bgcolor == transparent ? transparent : lighten($bgcolor, 5%)),
   $disabled-bgcolor: ($bgcolor == transparent ? transparent : #DFDFDF),
   $disabled-color: #9F9F9F, $height: 36px, $padding: 0 2rem,
   $border: none, $border-radius: 2px, $z = 1)
 </code></pre>
-        </article>
-        <article>
-          <h1>Flat button</h1>
-          <button class="flat">Flat button</button>
-          <div class="codes">
-            <div class="code">
-              <h4>HTML</h4>
-              <pre><code class="language-markup">&lt;button&gt;
+        <h2>Flat button</h2>
+        <button class="flat">Flat button</button>
+        <div class="codes">
+          <div class="code">
+            <h4>HTML</h4>
+            <pre><code class="language-markup">&lt;button&gt;
   Flat button
 &lt;/button&gt;</code></pre>
-            </div>
-            <div class="code">
-              <h4>Stylus</h4>
-              <pre><code class="language-stylus">button
+          </div>
+          <div class="code">
+            <h4>Stylus</h4>
+            <pre><code class="language-stylus">button
   sm-button-flat()</code></pre>
-            </div>
-            <div class="code">
-              <h4>Class based</h4>
-              <pre><code class="language-markup">&lt;button class=&quot;button flat&quot;&gt;
+          </div>
+          <div class="code">
+            <h4>Class based</h4>
+            <pre><code class="language-markup">&lt;button class=&quot;button flat&quot;&gt;
   Flat button
 &lt;/button&gt;</code></pre>
-            </div>
-            <div class="code">
-              <h4>Tag based</h4>
-              <p>Not possible</p>
-            </div>
           </div>
-        </article>
-        <article>
-          <h1>Large button</h1>
-          <button class="large">Large button</button>
-          <div class="codes">
-            <div class="code">
-              <h4>HTML</h4>
-              <pre><code class="language-markup">&lt;button&gt;
+          <div class="code">
+            <h4>Tag based</h4>
+            <p>Not possible</p>
+          </div>
+        </div>
+        <h2>Large button</h2>
+        <button class="large">Large button</button>
+        <div class="codes">
+          <div class="code">
+            <h4>HTML</h4>
+            <pre><code class="language-markup">&lt;button&gt;
   Large button
 &lt;/button&gt;</code></pre>
-            </div>
-            <div class="code">
-              <h4>Stylus</h4>
-              <pre><code class="language-stylus">button
+          </div>
+          <div class="code">
+            <h4>Stylus</h4>
+            <pre><code class="language-stylus">button
   sm-button-large()</code></pre>
-            </div>
-            <div class="code">
-              <h4>Class based</h4>
-              <pre><code class="language-markup">&lt;button class=&quot;button large&quot;&gt;
+          </div>
+          <div class="code">
+            <h4>Class based</h4>
+            <pre><code class="language-markup">&lt;button class=&quot;button large&quot;&gt;
   Large button
 &lt;/button&gt;</code></pre>
-            </div>
-            <div class="code">
-              <h4>Tag based</h4>
-              <p>Not possible</p>
-            </div>
           </div>
-        </article>
-        <article>
-          <h1>Disc button</h1>
-          <button class="disc">!</button>
-          <div class="codes">
-            <div class="code">
-              <h4>HTML</h4>
-              <pre><code class="language-markup">&lt;button&gt;
+          <div class="code">
+            <h4>Tag based</h4>
+            <p>Not possible</p>
+          </div>
+        </div>
+        <h2>Disc button</h2>
+        <button class="disc">!</button>
+        <div class="codes">
+          <div class="code">
+            <h4>HTML</h4>
+            <pre><code class="language-markup">&lt;button&gt;
   !
 &lt;/button&gt;</code></pre>
-            </div>
-            <div class="code">
-              <h4>Stylus</h4>
-              <pre><code class="language-stylus">button
+          </div>
+          <div class="code">
+            <h4>Stylus</h4>
+            <pre><code class="language-stylus">button
   sm-button-disc()</code></pre>
-            </div>
-            <div class="code">
-              <h4>Class based</h4>
-              <pre><code class="language-markup">&lt;button class=&quot;button disc&quot;&gt;
+          </div>
+          <div class="code">
+            <h4>Class based</h4>
+            <pre><code class="language-markup">&lt;button class=&quot;button disc&quot;&gt;
   !
 &lt;/button&gt;</code></pre>
-            </div>
-            <div class="code">
-              <h4>Tag based</h4>
-              <p>Not possible</p>
-            </div>
           </div>
-        </article>
+          <div class="code">
+            <h4>Tag based</h4>
+            <p>Not possible</p>
+          </div>
+        </div>
       </section>
-      <section id="collection">
+      <section id="collections">
+        <div class="headline-wrapper">
+          <h1>Collections</h1>
+        </div>
         <ul>
           <li><img src="assets/leaves.jpg">
             <p>Entry 1</p>
@@ -225,7 +230,9 @@
         </ul>
       </section>
       <section id="horizontal-list">
-        <h1>Horizontal list</h1>
+        <div class="headline-wrapper">
+          <h1>Horizontal list</h1>
+        </div>
         <ul>
           <li>Entry 1</li>
           <li>Entry 2</li>
@@ -233,13 +240,17 @@
         </ul>
       </section>
       <section id="footer">
-        <h1>Footer</h1>
+        <div class="headline-wrapper">
+          <h1>Footer</h1>
+        </div>
         <footer>
           <p>Some more text</p><small>© Copyright, Example Cooperation</small>
         </footer>
       </section>
       <section id="basics">
-        <h1>Basics</h1>
+        <div class="headline-wrapper">
+          <h1>Basics</h1>
+        </div>
         <h2>Philosophy</h2>
         <p>Stylus Material is a stylus-based material design framework. It is build on 3 principles:</p>
         <ol>

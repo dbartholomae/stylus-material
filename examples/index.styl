@@ -12,15 +12,35 @@ header.main
   & nav
     sm-navbar()
 
+body
+  min-height: 100vh
+
 main
+  min-height: 100vh
+  position: relative
   sm-container()
 
-  article
-    sm-z: 1
-    margin: 1rem
-    padding: 1rem
-    > h1
-      font-size: 2.9 rem
+  & > section
+    & > .headline-wrapper
+      position: absolute
+      top: 0
+      right: 0
+      background-color: darken($primary-color, 20%)
+      height: 100%
+      width: 1rem
+      padding-top: 5rem
+      padding-left: 5rem
+
+      & > h1
+        margin: 0
+        float: left
+        color: $light-text-color
+        transform: rotate(90deg)
+        transform-origin: top left 0
+        white-space: nowrap
+
+    & > h2
+      color: $primary-color
 
   pre
     &:before

@@ -311,6 +311,7 @@ header.main nav {
   padding-left: 5%;
   padding-right: 5%;
   position: fixed;
+  z-index: 50;
   top: 0;
   width: 100%;
   box-sizing: border-box;
@@ -354,7 +355,12 @@ header.main nav > h1 {
   font-size: 1.25rem;
   float: left;
 }
+body {
+  min-height: 100vh;
+}
 main {
+  min-height: 100vh;
+  position: relative;
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -370,13 +376,26 @@ main {
     padding-right: 15%;
   }
 }
-main article {
-  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16), 0 1px 9px 0 rgba(0,0,0,0.13);
-  margin: 1rem;
-  padding: 1rem;
+main > section > .headline-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #324191;
+  height: 100%;
+  width: 1rem;
+  padding-top: 5rem;
+  padding-left: 5rem;
 }
-main article > h1 {
-  font-size: 2.9rem;
+main > section > .headline-wrapper > h1 {
+  margin: 0;
+  float: left;
+  color: #fff;
+  transform: rotate(90deg);
+  transform-origin: top left 0;
+  white-space: nowrap;
+}
+main > section > h2 {
+  color: #3f51b5;
 }
 main pre:before {
   visibility: hidden;
