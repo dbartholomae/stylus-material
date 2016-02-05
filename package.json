@@ -6,15 +6,30 @@
   "license": "MIT",
   "main": "styl/index.styl",
   "scripts": {
-    "build": "stylus examples && jade examples/src/index.jade --out examples --pretty",
-    "size": "gzipped examples/index.css",
+    "build": "npm-run-all build:**",
+    "build:example:build": "stylus examples && jade examples/src/index.jade --out examples",
+    "build:example:min": "postcss --use postcss-cssnext --use cssnano -o examples/index.min.css examples/index.css",
+    "build:adapters:build": "stylus styl/adapters -o ./",
+    "build:adapters:clean": "de *.min.css",
+    "build:adapters:min": "postcss --use postcss-cssnext --use cssnano -r *.css",
+    "build:adapters:rename": "rename-files ./ .css .min.css",
+    "size": "echo classes.min.css && gzipped classes.min.css && echo tags.min.css && gzipped tags.min.css",
     "dev": "nodemon --ext styl,jade --watch examples/ --watch styl/ --exec npm run build"
   },
+  "dependencies": {
+    "prismjs": "1.4.1"
+  },
   "devDependencies": {
-    "stylus": "0.53.0",
-    "nodemon": "1.8.1",
+    "cssnano": "3.4.0",
+    "del-cli": "0.1.2",
+    "gzipped": "0.0.5",
     "jade": "1.11.0",
-    "gzipped": "0.0.5"
+    "nodemon": "1.8.1",
+    "npm-run-all": "1.5.1",
+    "postcss-cli": "2.5.0",
+    "postcss-cssnext": "2.4.0",
+    "rename-files": "0.0.2",
+    "stylus": "0.53.0"
   },
   "repository": {
     "type": "git",
