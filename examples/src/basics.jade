@@ -1,0 +1,34 @@
+section#basics
+  h1 Basics
+
+  h2 Philosophy
+  p Stylus Material is a stylus-based material design framework. It is build on 3 principles:
+  ol
+    li Define style in stylesheets, not as HTML or JavaScript
+    li Only add css that is actually used
+    li Convention over configuration
+  p.
+    To achieve these, Stylus Material doesn't use any JavaScript. It consists of Stylus Mixins only,
+    each completely customizable but with a set of sensible defaults. Mixins are written in a way
+    that does not require littering the HTML document with a lot of new classes, using HTML5
+    elements instead.
+
+  h2 Installation
+  h3 Via Stylus
+  p.
+    The preferred way to use Stylus Material is to install it via #[code npm] and
+    #[code @require] it in Stylus. You can theoretically require only selected components, but
+    given that Stylus Material is written completely as Mixins your CSS files will only contain
+    whatever you actually used anyways.
+
+  h3 As CSS
+  p.
+    Additionally, there are two precompiled versions that are not fully compliant with the libraries
+    philosophy but don't require stylus. Both can be found in the #[code dist] folder.
+  p.
+    The #[code classes.min.css] file defines classes similar to how most other frameworks do it.
+  p.
+    The #[code tags.min.css] sets material styles on HTML 5 tags.
+
+  h2 Usage
+  p Both Stylus and CSS uses are explained for each component in this document.

@@ -4,6 +4,10 @@ html(lang="en")
     meta(charset="UTF-8")
     link(rel="stylesheet" href="index.css")
     meta(name="viewport" content="width=device-width, initial-scale=1")
+    script(src='../node_modules/prismjs/components/prism-core.min.js')
+    script(src='../node_modules/prismjs/components/prism-markup.min.js')
+    script(src='../node_modules/prismjs/components/prism-stylus.min.js')
+    link(href='../node_modules/prismjs/themes/prism-coy.css' rel='stylesheet' type='text/css')
     link(href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,400italic,500,700,900' rel='stylesheet' type='text/css')
     link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
     title Showcase
@@ -11,6 +15,7 @@ html(lang="en")
     header.main
       nav
         h1 Stylus Material
+        a(href="#basics") Basics
         a(href="#navbar") Navbar
         a(href="#cards") Cards
         a(href="#chips") Chips
@@ -20,6 +25,7 @@ html(lang="en")
         a(href="#horizontal-list") Horizontal lists
         a(href="#footer") Footer
     main
+      include ./components/navbar.jade
       include ./components/cards.jade
       include ./components/chips.jade
       include ./components/flow-text.jade
@@ -27,4 +33,5 @@ html(lang="en")
       include ./components/collection.jade
       include ./components/horizontal-list.jade
       include ./components/footer.jade
-      include ./components/navbar.jade
+
+      include ./basics.jade
