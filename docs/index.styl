@@ -43,6 +43,8 @@ main
       color: $primary-color
 
   pre
+    & code
+      font-size: 1rem
     &:before
       visibility: hidden
     &:after
@@ -76,30 +78,20 @@ main
         sm-button-disc()
 
   section#cards
-    & .cards-list
-      sm-columns(2)
     & article
-      &.default
-        sm-card()
-      &.title-below-image
-        sm-card($title-in-image: false)
-      &.green
-        sm-card($text-protection: darkgreen)
-      &.light
-        sm-card($text-protection: white, $title-color: black)
+      sm-card()
 
-  section#collection
+  section#collections
     & ul
-      sm-collection($img-circle: true)
+      sm-collection()
 
   section#horizontal-list
     & ul
       sm-horizontal-list('—')
 
   section#navbar
-    & header
-      & nav
-        sm-navbar($fixed: false, $align-right: false)
+    & nav
+      sm-navbar($fixed: false, $align-right: false)
 
 footer
   sm-footer()

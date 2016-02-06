@@ -7,14 +7,14 @@
   "main": "styl/index.styl",
   "scripts": {
     "build": "npm-run-all build:**",
-    "build:example:build": "stylus examples && jade examples/src/index.jade --out examples",
-    "build:example:min": "postcss --use postcss-cssnext --use cssnano -o examples/index.min.css examples/index.css",
+    "build:docs:build": "stylus docs && jade docs/src/index.jade --out docs",
+    "build:docs:min": "postcss --use postcss-cssnext --use cssnano -o docs/index.min.css docs/index.css",
     "build:adapters:build": "stylus styl/adapters -o ./",
     "build:adapters:clean": "de *.min.css",
     "build:adapters:min": "postcss --use postcss-cssnext --use cssnano -r *.css",
     "build:adapters:rename": "rename-files ./ .css .min.css",
     "size": "echo classes.min.css && gzipped classes.min.css && echo tags.min.css && gzipped tags.min.css",
-    "dev": "nodemon --ext styl,jade --watch examples/ --watch styl/ --exec npm run build"
+    "dev": "nodemon --ext styl,jade --watch docs/ --watch styl/ --exec npm run build"
   },
   "dependencies": {
     "prismjs": "1.4.1"

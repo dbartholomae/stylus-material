@@ -1,0 +1,51 @@
+section#cards
+  .headline-wrapper
+    h1 Cards
+  article.default
+    img(src="assets/leaves.jpg")
+    h1 This title is overlayed
+    p.
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+      invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+      accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+      sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+      sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+      aliquyam erat, sed diam voluptua.
+  .codes
+    .code
+      h4 HTML
+      pre: code.language-markup
+        = '<article>\n'
+        = '  <img src="assets/leaves.jpg">\n'
+        = '  <h1>Title</h1>\n'
+        = '  <p>Lorem ipsum...</p>\n'
+        = '</article>'
+    .code
+      h4 Stylus
+      pre: code.language-stylus.
+        article
+          sm-card()
+    .code
+      h4 Class based
+      pre: code.language-markup
+        = '<article class="card title-in-image">\n'
+        = '  <img class="card-img" src="assets/leaves.jpg">\n'
+        = '  <h1 class="card-title">Title</h1>\n'
+        = '  <p>Lorem ipsum...</p>\n'
+        = '</article>'
+    .code
+      h4 Tag based
+      pre: code.language-markup
+        = '<article>\n'
+        = '  <img src="assets/leaves.jpg">\n'
+        = '  <h1>Title</h1>\n'
+        = '  <p>Lorem ipsum...</p>\n'
+        = '</article>'
+  h4 With all options
+    pre: code.language-stylus.
+      article
+        sm-card($bgcolor: $background-color, $title-in-image: true, $text-protection: #000,
+             $title-size: 24px,
+             $title-color: ($title-in-image ? $light-text-color : $primary-text-color),
+             $padding: 20px, $title-tag: "h1", $img-tag: "img"
+          )

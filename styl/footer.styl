@@ -5,10 +5,10 @@
 //
 // Create a colored footer element.
 //
-// ex. sm-footer($copyright = "small", $bg-color = $primary-color, $color = $light-text-color,
-//           $margin-top = 20px, $padding-top = 20px, $use-container = true
+// ex. sm-footer($copyright-tag: "small", $bg-color: $primary-color, $color: $light-text-color,
+//           $margin-top: 20px, $padding-top: 20px, $use-container: true
 //         )
-sm-footer($copyright = "small", $bg-color = $primary-color, $color = $light-text-color,
+sm-footer($copyright-tag = "small", $bg-color = $primary-color, $color = $light-text-color,
       $margin-top = 20px, $padding-top = 20px, $use-container = true
     )
   margin-top: $margin-top
@@ -20,8 +20,8 @@ sm-footer($copyright = "small", $bg-color = $primary-color, $color = $light-text
     & > *
       sm-container()
 
-  if $copyright
-    & {selector($copyright)}
+  if $copyright-tag
+    & {selector($copyright-tag)}
       display: block
       overflow: hidden
       height: 50px

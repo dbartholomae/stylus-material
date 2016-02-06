@@ -1,0 +1,37 @@
+section#horizontal-list
+  .headline-wrapper
+    h1 Horizontal list
+  ul
+    li Entry 1
+    li Entry 2
+    li Entry 3
+
+  .codes
+    .code
+      h4 HTML
+      pre: code.language-markup
+        = '<ul>">\n'
+        = '  <li>Entry 1</li>\n'
+        = '  <li>Entry 2</li>\n'
+        = '  <li>Entry 3</li>\n'
+        = '</ul>'
+    .code
+      h4 Stylus
+      pre: code.language-stylus.
+        ul
+          sm-horizontal-list()
+    .code
+      h4 Class based
+      pre: code.language-markup
+        = '<ul class="horizontal-list">">\n'
+        = '  <li>Entry 1</li>\n'
+        = '  <li>Entry 2</li>\n'
+        = '  <li>Entry 3</li>\n'
+        = '</ul>'
+    .code
+      h4 Tag based
+      p Not implemented
+  h4 With all options
+    pre: code.language-stylus.
+      ul
+        sm-horizontal-list($separator: '', $separator-font: false)

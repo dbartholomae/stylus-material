@@ -397,6 +397,9 @@ main > section > .headline-wrapper > h1 {
 main > section > h2 {
   color: #3f51b5;
 }
+main pre code {
+  font-size: 1rem;
+}
 main pre:before {
   visibility: hidden;
 }
@@ -748,30 +751,7 @@ main section#buttons button.disc:disabled:hover {
   background-color: #dfdfdf;
   color: #9f9f9f;
 }
-main section#cards .cards-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-main section#cards .cards-list > * {
-  margin-top: 0.5rem;
-}
-@media only screen and (max-width: 600px) {
-  main section#cards .cards-list > * {
-    width: 99%;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 992px) {
-  main section#cards .cards-list > * {
-    width: 99%;
-  }
-}
-@media only screen and (min-width: 993px) {
-  main section#cards .cards-list > * {
-    width: 49%;
-  }
-}
-main section#cards article.default {
+main section#cards article {
   position: relative;
   background-color: #fff;
   transition: box-shadow 0.25s;
@@ -780,11 +760,11 @@ main section#cards article.default {
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16), 0 1px 9px 0 rgba(0,0,0,0.13);
   overflow: hidden;
 }
-main section#cards article.default > * {
+main section#cards article > * {
   padding-left: 20px;
   padding-right: 20px;
 }
-main section#cards article.default > h1 {
+main section#cards article > h1 {
   color: #fff;
   font-size: 24px;
   font-weight: 300;
@@ -794,7 +774,7 @@ main section#cards article.default > h1 {
   height: 0;
   z-index: -1;
 }
-main section#cards article.default > h1:after {
+main section#cards article > h1:after {
   content: '';
   position: absolute;
   bottom: -36px;
@@ -805,7 +785,7 @@ main section#cards article.default > h1:after {
   pointer-events: none;
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.33) 66%, rgba(0,0,0,0.65) 100%);
 }
-main section#cards article.default > img {
+main section#cards article > img {
   position: relative;
   width: 100%;
   display: block;
@@ -813,123 +793,13 @@ main section#cards article.default > img {
   border-radius: 2px 2px 0 0;
   z-index: -1;
 }
-main section#cards article.title-below-image {
-  position: relative;
-  background-color: #fff;
-  transition: box-shadow 0.25s;
-  border-radius: 2px;
-  z-index: -1;
-  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16), 0 1px 9px 0 rgba(0,0,0,0.13);
-  overflow: hidden;
-}
-main section#cards article.title-below-image > * {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-main section#cards article.title-below-image > h1 {
-  color: #202020;
-  font-size: 24px;
-  font-weight: 300;
-}
-main section#cards article.title-below-image > img {
-  position: relative;
-  width: 100%;
-  display: block;
-  padding: 0;
-  border-radius: 2px 2px 0 0;
-  z-index: -1;
-}
-main section#cards article.green {
-  position: relative;
-  background-color: #fff;
-  transition: box-shadow 0.25s;
-  border-radius: 2px;
-  z-index: -1;
-  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16), 0 1px 9px 0 rgba(0,0,0,0.13);
-  overflow: hidden;
-}
-main section#cards article.green > * {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-main section#cards article.green > h1 {
-  color: #fff;
-  font-size: 24px;
-  font-weight: 300;
-  position: relative;
-  top: -24px;
-  margin-top: -12px;
-  height: 0;
-  z-index: -1;
-}
-main section#cards article.green > h1:after {
-  content: '';
-  position: absolute;
-  bottom: -36px;
-  left: 0;
-  width: 100%;
-  height: 96px;
-  z-index: -1;
-  pointer-events: none;
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,100,0,0.33) 66%, rgba(0,100,0,0.65) 100%);
-}
-main section#cards article.green > img {
-  position: relative;
-  width: 100%;
-  display: block;
-  padding: 0;
-  border-radius: 2px 2px 0 0;
-  z-index: -1;
-}
-main section#cards article.light {
-  position: relative;
-  background-color: #fff;
-  transition: box-shadow 0.25s;
-  border-radius: 2px;
-  z-index: -1;
-  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16), 0 1px 9px 0 rgba(0,0,0,0.13);
-  overflow: hidden;
-}
-main section#cards article.light > * {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-main section#cards article.light > h1 {
-  color: #000;
-  font-size: 24px;
-  font-weight: 300;
-  position: relative;
-  top: -24px;
-  margin-top: -12px;
-  height: 0;
-  z-index: -1;
-}
-main section#cards article.light > h1:after {
-  content: '';
-  position: absolute;
-  bottom: -36px;
-  left: 0;
-  width: 100%;
-  height: 96px;
-  z-index: -1;
-  pointer-events: none;
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(255,255,255,0.33) 66%, rgba(255,255,255,0.65) 100%);
-}
-main section#cards article.light > img {
-  position: relative;
-  width: 100%;
-  display: block;
-  padding: 0;
-  border-radius: 2px 2px 0 0;
-  z-index: -1;
-}
-main section#collection ul {
+main section#collections ul {
   border: 1px solid #e0e0e0;
   border-radius: 2px;
   overflow: hidden;
   position: relative;
 }
-main section#collection ul > * {
+main section#collections ul > * {
   display: block;
   background-color: #fff;
   line-height: 1.5rem;
@@ -938,45 +808,38 @@ main section#collection ul > * {
   transition: 0.25s;
   position: relative;
 }
-main section#collection ul > *:last-child {
+main section#collections ul > *:last-child {
   border-bottom: none;
 }
-main section#collection ul > *:active {
+main section#collections ul > *:active {
   background-color: #a6afe0;
   color: #3f51b5;
 }
-main section#collection ul > *:hover {
+main section#collections ul > *:hover {
   color: #3f51b5;
   background-color: #c4caea;
 }
-main section#collection ul > * img {
+main section#collections ul > * img {
   position: absolute;
   left: 20px;
   top: 5px;
   width: 34px;
   height: 34px;
-  overflow: hidden;
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
-  border-radius: 50%;
-  padding: 0;
-  vertical-align: middle;
 }
-main section#collection ul > * p {
+main section#collections ul > * p {
   position: relative;
   padding-left: 41px;
   margin: 0;
   min-height: 24px;
 }
-main section#collection ul > h4 {
+main section#collections ul > h4 {
   padding: 30px 20px;
   margin: 0;
 }
-main section#collection ul > h4 ~ *:not(h4) {
+main section#collections ul > h4 ~ *:not(h4) {
   padding-left: 30px;
 }
-main section#collection ul > h4 ~ *:not(h4) > img {
+main section#collections ul > h4 ~ *:not(h4) > img {
   left: 30px;
 }
 main section#horizontal-list ul {
@@ -993,7 +856,7 @@ main section#horizontal-list ul > *:before {
 main section#horizontal-list ul > *:first-child:before {
   display: none;
 }
-main section#navbar header nav {
+main section#navbar nav {
   *zoom: 1;
   position: relative;
   color: #fff;
@@ -1002,39 +865,39 @@ main section#navbar header nav {
   padding-left: 5%;
   padding-right: 5%;
 }
-main section#navbar header nav:before,
-main section#navbar header nav:after {
+main section#navbar nav:before,
+main section#navbar nav:after {
   content: " ";
   display: table;
 }
-main section#navbar header nav:after {
+main section#navbar nav:after {
   clear: both;
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  main section#navbar header nav {
+  main section#navbar nav {
     padding-left: 7.5%;
     padding-right: 7.5%;
   }
 }
 @media only screen and (min-width: 993px) {
-  main section#navbar header nav {
+  main section#navbar nav {
     padding-left: 15%;
     padding-right: 15%;
   }
 }
-main section#navbar header nav > * {
+main section#navbar nav > * {
   display: inline-table;
   color: #fff;
   padding: 8px;
   vertical-align: middle;
 }
-main section#navbar header nav > a:hover {
+main section#navbar nav > a:hover {
   background-color: #4d5fc1;
 }
-main section#navbar header nav > a:active {
+main section#navbar nav > a:active {
   background-color: #6171c8;
 }
-main section#navbar header nav > h1 {
+main section#navbar nav > h1 {
   display: inline-table;
   margin: 0;
   font-size: 1.25rem;
