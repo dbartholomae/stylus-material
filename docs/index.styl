@@ -22,22 +22,26 @@ main
 
   & > section
     & > .headline-wrapper
-      position: absolute
-      top: 0
-      right: 0
-      background-color: darken($primary-color, 20%)
-      height: 100%
-      width: 1rem
-      padding-top: 5rem
-      padding-left: 5rem
+      @media $medium-and-down
+        margin-top: 5rem
+      @media $large-and-up
+        background-color: darken($primary-color, 20%)
+        position: absolute
+        top: 0
+        right: 0
+        height: 100%
+        width: 1rem
+        padding-top: 5rem
+        padding-left: 5rem
 
       & > h1
         margin: 0
-        float: left
-        color: $light-text-color
-        transform: rotate(90deg)
-        transform-origin: top left 0
-        white-space: nowrap
+        @media $large-and-up
+          color: $light-text-color
+          float: left
+          transform: rotate(90deg)
+          transform-origin: top left 0
+          white-space: nowrap
 
     & > h2
       color: $primary-color
@@ -84,6 +88,12 @@ main
   section#collections
     & ul
       sm-collection()
+
+  section#grid
+    & .container
+      sm-container()
+    & .columns
+      sm-columns()
 
   section#horizontal-list
     & ul

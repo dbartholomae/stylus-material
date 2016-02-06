@@ -16,6 +16,9 @@ html(lang="en")
       nav
         h1 Stylus Material
         a(href="#basics") Basics
+        a(href="#grid") Grid
+        a(href="#colors") Colors
+        a(href="#media-queries") Media queries
         a(href="#navbar") Navbar
         a(href="#cards") Cards
         a(href="#chips") Chips
@@ -25,6 +28,9 @@ html(lang="en")
         a(href="#horizontal-list") Horizontal lists
         a(href="#footer") Footer
     main
+      include ./components/grid.jade
+      include ./components/colors.jade
+      include ./components/media-queries.jade
       include ./components/navbar.jade
       include ./components/cards.jade
       include ./components/chips.jade

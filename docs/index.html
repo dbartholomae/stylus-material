@@ -1,4 +1,39 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><link rel="stylesheet" href="index.min.css"><meta name="viewport" content="width=device-width, initial-scale=1"><script src="../node_modules/prismjs/components/prism-core.min.js"></script><script src="../node_modules/prismjs/components/prism-markup.min.js"></script><script src="../node_modules/prismjs/components/prism-stylus.min.js"></script><link href="../node_modules/prismjs/themes/prism-coy.css" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,400italic,500,700,900" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><title>Showcase</title></head><body><header class="main"><nav><h1>Stylus Material</h1><a href="#basics">Basics</a><a href="#navbar">Navbar</a><a href="#cards">Cards</a><a href="#chips">Chips</a><a href="#flow-text">Flow text</a><a href="#buttons">Buttons</a><a href="#collections">Collections</a><a href="#horizontal-list">Horizontal lists</a><a href="#footer">Footer</a></nav></header><main><section id="navbar"><div class="headline-wrapper"><h1>Navbar</h1></div><nav><h1>Title</h1><a>Entry 1</a><a>Entry 2</a></nav><div class="codes"><div class="code"><h4>HTML</h4><pre><code class="language-markup">&lt;nav&gt;
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><link rel="stylesheet" href="index.min.css"><meta name="viewport" content="width=device-width, initial-scale=1"><script src="../node_modules/prismjs/components/prism-core.min.js"></script><script src="../node_modules/prismjs/components/prism-markup.min.js"></script><script src="../node_modules/prismjs/components/prism-stylus.min.js"></script><link href="../node_modules/prismjs/themes/prism-coy.css" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,400italic,500,700,900" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><title>Showcase</title></head><body><header class="main"><nav><h1>Stylus Material</h1><a href="#basics">Basics</a><a href="#grid">Grid</a><a href="#colors">Colors</a><a href="#media-queries">Media queries</a><a href="#navbar">Navbar</a><a href="#cards">Cards</a><a href="#chips">Chips</a><a href="#flow-text">Flow text</a><a href="#buttons">Buttons</a><a href="#collections">Collections</a><a href="#horizontal-list">Horizontal lists</a><a href="#footer">Footer</a></nav></header><main><section id="grid"><div class="headline-wrapper"><h1>Grid</h1></div><h2>Container</h2><div class="container"><p>Padded content</p></div><div class="codes"><div class="code"><h4>HTML</h4><pre><code class="language-markup">&lt;div class=&quot;container&quot;&gt;
+  &lt;p&gt;Padded content&lt;/p&gt;
+&lt;/div&gt;</code></pre></div><div class="code"><h4>Stylus</h4><pre><code class="language-stylus">.container
+  sm-container()</code></pre></div><div class="code"><h4>Class based</h4><pre><code class="language-markup">&lt;div class=&quot;container&quot;&gt;
+  &lt;p&gt;First column&lt;/p&gt;
+  &lt;p&gt;Second column&lt;/p&gt;
+  &lt;p&gt;Third column&lt;/p&gt;
+&lt;/div&gt;</code></pre></div><div class="code"><h4>Tag based</h4><p>Not implemented</p></div></div><h4>With all options<pre><code class="language-stylus">.container
+  sm-container($large-padding: 15%, $medium-padding: ($large-padding/2),
+      $small-padding: ($large-padding/3)
+    )
+</code></pre></h4><h2>Columns</h2><div class="columns"><p>First column</p><p>Second column</p><p>Third column</p></div><div class="codes"><div class="code"><h4>HTML</h4><pre><code class="language-markup">&lt;div class=&quot;columns&quot;&gt;
+  &lt;p&gt;First column&lt;/p&gt;
+  &lt;p&gt;Second column&lt;/p&gt;
+  &lt;p&gt;Third column&lt;/p&gt;
+&lt;/div&gt;</code></pre></div><div class="code"><h4>Stylus</h4><pre><code class="language-stylus">.columns
+  sm-columns()</code></pre></div><div class="code"><h4>Class based</h4><pre><code class="language-markup">&lt;div class=&quot;columns-3-2-1&quot;&gt;
+  &lt;p&gt;First column&lt;/p&gt;
+  &lt;p&gt;Second column&lt;/p&gt;
+  &lt;p&gt;Third column&lt;/p&gt;
+&lt;/div&gt;</code></pre></div><div class="code"><h4>Tag based</h4><p>Not implemented</p></div></div><h4>With all options<pre><code class="language-stylus">.columns
+  sm-columns($n-large: 3, $n-medium: (ceil($n-large / 2)), $n-small: (ceil($n-large / 4)),
+      $margin-horizontal: 1%, $margin-vertical: 0.5rem,
+      $justify-content: space-around
+    )</code></pre></h4></section><section id="colors"><div class="headline-wrapper"><h1>Colors</h1></div><p>Colors can be set for each component individually. Default colors are taken from these
+variables:
+</p><pre><code class="language-stylus">$primary-color ?= #3F51B5
+$background-color ?= #FFFFFF
+$accent-color ?= #FF5622
+$light-text-color ?= #FFFFFF
+$primary-text-color ?= #202020</code></pre></section><section id="media-queries"><div class="headline-wrapper"><h1>Media queries</h1></div><p>Stylus Material supports breakpoints for 3 screen sizes: small, medium and large. Break points
+can be modified by setting their maximum sizes:</p><pre><code class="language-stylus">$small-screen = 600px
+$medium-screen = 992px
+$large-screen = 1200px</code></pre><p>Stylus Material offers multiple variables to use in media queries based on these two
+breakpoints: <code>$medium-and-up</code>, <code>$large-and-up</code>, <code>$small-and-down</code>,
+<code>$medium-and-down</code>, and <code>$medium-only</code>.</p></section><section id="navbar"><div class="headline-wrapper"><h1>Navbar</h1></div><nav><h1>Title</h1><a>Entry 1</a><a>Entry 2</a></nav><div class="codes"><div class="code"><h4>HTML</h4><pre><code class="language-markup">&lt;nav&gt;
   &lt;h1&gt;Title&lt;/h1&gt;
   &lt;a&gt;Entry 1&lt;/a&gt;
   &lt;a&gt;Entry 2&lt;/a&gt;

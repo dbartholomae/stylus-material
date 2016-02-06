@@ -36,5 +36,18 @@
 .horizontal-list
   sm-horizontal-list()
 
+// Navbar
 .navbar
   sm-navbar($title-tag: ".navbar-title")
+
+// Container
+.container
+  sm-container()
+
+// Columns
+for $l in (1..10)
+  for $m in (1..$l)
+    for $s in (1..$m)
+      $class = "columns-" + $l + "-" + $m + "-" + $s
+      {selector($class)}
+        sm-columns($l, $m, $s)

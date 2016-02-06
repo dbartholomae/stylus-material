@@ -376,23 +376,34 @@ main {
     padding-right: 15%;
   }
 }
-main > section > .headline-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: #324191;
-  height: 100%;
-  width: 1rem;
-  padding-top: 5rem;
-  padding-left: 5rem;
+@media only screen and (max-width: 992px) {
+  main > section > .headline-wrapper {
+    margin-top: 5rem;
+  }
+}
+@media only screen and (min-width: 993px) {
+  main > section > .headline-wrapper {
+    background-color: #324191;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 1rem;
+    padding-top: 5rem;
+    padding-left: 5rem;
+  }
 }
 main > section > .headline-wrapper > h1 {
   margin: 0;
-  float: left;
-  color: #fff;
-  transform: rotate(90deg);
-  transform-origin: top left 0;
-  white-space: nowrap;
+}
+@media only screen and (min-width: 993px) {
+  main > section > .headline-wrapper > h1 {
+    color: #fff;
+    float: left;
+    transform: rotate(90deg);
+    transform-origin: top left 0;
+    white-space: nowrap;
+  }
 }
 main > section > h2 {
   color: #3f51b5;
@@ -841,6 +852,45 @@ main section#collections ul > h4 ~ *:not(h4) {
 }
 main section#collections ul > h4 ~ *:not(h4) > img {
   left: 30px;
+}
+main section#grid .container {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  main section#grid .container {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  main section#grid .container {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+main section#grid .columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+main section#grid .columns > * {
+  margin-top: 0.5rem;
+}
+@media only screen and (max-width: 600px) {
+  main section#grid .columns > * {
+    width: 99%;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  main section#grid .columns > * {
+    width: 49%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  main section#grid .columns > * {
+    width: 32.33333333333333%;
+  }
 }
 main section#horizontal-list ul {
   list-style: none;
