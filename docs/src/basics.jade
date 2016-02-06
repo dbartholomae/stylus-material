@@ -3,7 +3,10 @@ section#basics
     h1 Basics
 
   h2 Philosophy
-  p Stylus Material is a stylus-based material design framework. It is build on 3 principles:
+  p.
+    Stylus Material is a stylus-based adaption of the
+    #[a(href="http://materializecss.com/") Materialize] material design framework. It is built on 3
+    principles:
   ol
     li Define style in stylesheets, not as HTML or JavaScript
     li Only add css that is actually used
@@ -33,4 +36,12 @@ section#basics
     The #[code tags.min.css] sets material styles on HTML 5 tags.
 
   h2 Usage
-  p Both Stylus and CSS uses are explained for each component in this document.
+  p.
+    Both Stylus and CSS uses are explained for each component in this document. Futhermore if
+    you use the Stylus version you will most likely want to initialize global CSS by calling
+    #[code sm-init()] and include the Roboto font.
+    Here's a full version with all parameters for #[code sm-init()]:
+  pre: code.language-stylus.
+    sm-init($init-ul = true, $init-font = "Roboto", $h1-fontsize = 4.2rem, $h2-fontsize = 3.56rem,
+      $h3-fontsize = 2.92rem, $h4-fontsize = 2.28rem, $h5-fontsize = 1.64rem, $h6-fontsize = 1rem
+      )

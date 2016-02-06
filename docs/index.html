@@ -173,7 +173,9 @@ aliquyam erat, sed diam voluptua.</p></article><div class="codes"><div class="co
 &lt;/footer&gt;</code></pre></div></div><h4>With all options<pre><code class="language-stylus">footer
   sm-footer($copyright-tag: "small", $bg-color: $primary-color, $color: $light-text-color,
       $margin-top: 20px, $padding-top: 20px, $use-container: true
-    )</code></pre></h4></section><section id="basics"><div class="headline-wrapper"><h1>Basics</h1></div><h2>Philosophy</h2><p>Stylus Material is a stylus-based material design framework. It is build on 3 principles:</p><ol><li>Define style in stylesheets, not as HTML or JavaScript</li><li>Only add css that is actually used</li><li>Convention over configuration</li></ol><p>To achieve these, Stylus Material is fully functional without javascript (reload this page with
+    )</code></pre></h4></section><section id="basics"><div class="headline-wrapper"><h1>Basics</h1></div><h2>Philosophy</h2><p>Stylus Material is a stylus-based adaption of the
+<a href="http://materializecss.com/">Materialize</a> material design framework. It is built on 3
+principles:</p><ol><li>Define style in stylesheets, not as HTML or JavaScript</li><li>Only add css that is actually used</li><li>Convention over configuration</li></ol><p>To achieve these, Stylus Material is fully functional without javascript (reload this page with
 JavaScript disabled to see what it looks like). It consists of Stylus Mixins only,
 each completely customizable but with a set of sensible defaults. Mixins are written in a way
 that does not require littering the HTML document with a lot of new classes, using HTML5
@@ -184,4 +186,9 @@ given that Stylus Material is written completely as Mixins your CSS files will o
 whatever you actually used anyways.
 </p><h3>As CSS</h3><p>Additionally, there are two precompiled versions that are not fully compliant with the libraries
 philosophy but don't require stylus. Both can be found in the root folder.</p><p>The <code>classes.min.css</code> file defines classes similar to how most other frameworks do it.</p><p>The <code>tags.min.css</code> sets material styles on HTML 5 tags.
-</p><h2>Usage</h2><p>Both Stylus and CSS uses are explained for each component in this document.</p></section></main></body></html>
+</p><h2>Usage</h2><p>Both Stylus and CSS uses are explained for each component in this document. Futhermore if
+you use the Stylus version you will most likely want to initialize global CSS by calling
+<code>sm-init()</code> and include the Roboto font.
+Here's a full version with all parameters for <code>sm-init()</code>:</p><pre><code class="language-stylus">sm-init($init-ul = true, $init-font = "Roboto", $h1-fontsize = 4.2rem, $h2-fontsize = 3.56rem,
+  $h3-fontsize = 2.92rem, $h4-fontsize = 2.28rem, $h5-fontsize = 1.64rem, $h6-fontsize = 1rem
+  )</code></pre></section></main></body></html>
