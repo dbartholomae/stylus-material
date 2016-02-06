@@ -1,18 +1,14 @@
-# stylus-material@0.0.1
+# stylus-material@1.0.0
 [![npm version](https://badge.fury.io/js/stylus-material.svg)](https://npmjs.org/package/stylus-material)
 [![dependency status](https://david-dm.org/dbartholomae/stylus-material.svg?theme=shields.io)](https://david-dm.org/dbartholomae/stylus-material)
 [![devDependency status](https://david-dm.org/dbartholomae/stylus-material/dev-status.svg)](https://david-dm.org/dbartholomae/stylus-material#info=devDependencies)
 [![Gitter](https://badges.gitter.im/dbartholomae/stylus-material.svg)](https://gitter.im/dbartholomae/stylus-material) 
 
-__This will be really useless before version 1.0.0!__
-
-A collection of stylus mixins for material design. This is basically a port of
+A collection of stylus mixins for material design. This is basically a port of the static parts of
 [materialize](https://github.com/Dogfalo/materialize/) to
 [Stylus](https://github.com/stylus/stylus/) using Mixins.
  
 ## Installation
-__This module won't be available via npm before version 1.0.0!__
-
 Install with `npm`:
 ```sh
 npm install stylus-material --save
@@ -41,7 +37,7 @@ footer
     sm-horizontal-list('—')
 ```
 
-Find examples of all components in the `examples` folder.
+Find examples of all components in the `docs` folder.
 
 ## Library size
 This library uses mostly mixins, therefore only what you actually use will increase your filesize.
