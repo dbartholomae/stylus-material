@@ -15,8 +15,10 @@ sm-navbar($bgcolor = $primary-color, $font-color = $light-text-color, $padding =
     )
   sm-clearfix()
   position: relative
-  color: $font-color
-  background-color: $bgcolor
+  if $font-color
+    color: $font-color
+  if $bgcolor
+    background-color: $bgcolor
   sm-z(1)
   if $use-container
     sm-container()
@@ -32,15 +34,18 @@ sm-navbar($bgcolor = $primary-color, $font-color = $light-text-color, $padding =
 
   > *
     display: inline-table
-    color: $font-color
+    if $font-color
+      color: $font-color
     padding: $padding
     vertical-align: middle
 
   > a
     &:hover
-      background-color: lighten($bgcolor, 10%)
+      if $bgcolor
+        background-color: lighten($bgcolor, 10%)
     &:active
-      background-color: lighten($bgcolor, 20%)
+      if $bgcolor
+        background-color: lighten($bgcolor, 20%)
 
   if $title-tag
     > {selector($title-tag)}
