@@ -1,4 +1,4 @@
-# stylus-material@1.1.0
+# stylus-material@1.1.1
 [![npm version](https://badge.fury.io/js/stylus-material.svg)](https://npmjs.org/package/stylus-material)
 [![dependency status](https://david-dm.org/dbartholomae/stylus-material.svg?theme=shields.io)](https://david-dm.org/dbartholomae/stylus-material)
 [![devDependency status](https://david-dm.org/dbartholomae/stylus-material/dev-status.svg)](https://david-dm.org/dbartholomae/stylus-material#info=devDependencies)
