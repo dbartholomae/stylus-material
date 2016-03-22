@@ -1,5 +1,6 @@
-@require "./variables.styl"
+@require "./variables"
 @require "./z"
+@require "./text-protection"
 
 // Mixin: Card
 //
@@ -19,7 +20,7 @@ sm-card($bgcolor = $background-color, $title-in-image = true, $text-protection =
       $title-size = 24px,
       $title-color = ($title-in-image ? $light-text-color : $primary-text-color),
       $padding = 20px, $title-tag = "h1", $img-tag = "img"
-    )
+      )
   position: relative
   background-color: $bgcolor
   transition: box-shadow .25s
@@ -45,17 +46,7 @@ sm-card($bgcolor = $background-color, $title-in-image = true, $text-protection =
 
       if $text-protection
         z-index: -1
-        &:after
-          content: ''
-          position: absolute
-          bottom: -($title-size * 1.5)px
-          left: 0
-          width: 100%
-          height: ($title-size * 4)px
-          z-index: -1
-          pointer-events: none
-          background: linear-gradient(to bottom,
-            rgba(0,0,0,0) 0%, alpha($text-protection,0.33) 66%, alpha($text-protection,0.65) 100%)
+        sm-text-protection($height: ($title-size * 4)px, $color: $text-protection, $bottom: -($title-size * 1.5)px, $z-index: -1)
 
   > {selector($img-tag)}
     position: relative
