@@ -20,12 +20,12 @@
 // Format text input elements of forms and their labels.
 // If $label-tag isn't false, $label-tag elements that are next siblings to input elements (+) will be formatted accordingly
 //
-// ex. sm-input($height: 3rem, $fontsize: 1rem, $label-tag: "label",
+// ex. sm-input($height: 3rem, $fontsize: 1rem, $label-tag: "label", $width: 100%
 //         $border-color: #DDD, $disabled-color: rgba(0,0,0,.26) , $focus-color: $accent-color
 //     )
 
 
-sm-input($height = 3rem, $fontsize = 1rem, $label-tag = "label",
+sm-input($height = 3rem, $fontsize = 1rem, $label-tag = "label", $width = 100%,
     $border-color = #DDD, $disabled-color = rgba(0,0,0,.26) , $focus-color = $accent-color
   )
   background-color: transparent
@@ -34,7 +34,8 @@ sm-input($height = 3rem, $fontsize = 1rem, $label-tag = "label",
   border-radius: 0
   outline: none
   height: $height
-  width: 100%
+  if $width
+    width: $width
   font-size: $fontsize
   margin: 0 0 15px 0
   padding: 0
