@@ -641,7 +641,6 @@ main section#buttons button.flat {
   color: #202020;
   background-color: transparent;
   font-size: 1.3rem;
-  box-shadow: none !important;
   border: none;
   border-radius: 2px;
   height: 36px;
