@@ -91,7 +91,7 @@ aliquyam erat, sed diam voluptua.</p></article><div class="codes"><div class="co
     )</code></pre></h4></section><section id="flow-text"><div class="headline-wrapper"><h1>Flow text</h1></div><p>This text is automatically resized based on screen size for optimal legibility.</p><div class="codes"><div class="code"><h4>HTML</h4><pre><code class="language-markup">&lt;p&gt;Some text&lt;/p&gt;</code></pre></div><div class="code"><h4>Stylus</h4><pre><code class="language-stylus">p
   sm-flow-text()</code></pre></div><div class="code"><h4>Class based</h4><pre><code class="language-markup">&lt;p class=&quot;flow-text&quot;&gt;Some text&lt;/p&gt;</code></pre></div><div class="code"><h4>Tag based</h4><pre><code class="language-markup">&lt;p&gt;Some text&lt;/p&gt;</code></pre></div></div><h4>With all options<pre><code class="language-stylus">p
   sm-flow-text($intervals: 20, $range: $large-screen - $small-screen,
-      $interval-size: $range / $intervals
+      $interval-size: $range / $intervals, $base-size: 1.2rem
     )</code></pre></h4></section><section id="buttons"><div class="headline-wrapper"><h1>Buttons</h1></div><h2>Default button</h2><button class="default">Default button</button><div class="codes"><div class="code"><h4>HTML</h4><pre><code class="language-markup">&lt;button&gt;
   Default button
 &lt;/button&gt;</code></pre></div><div class="code"><h4>Stylus</h4><pre><code class="language-stylus">button
@@ -155,7 +155,7 @@ aliquyam erat, sed diam voluptua.</p></article><div class="codes"><div class="co
   &lt;li&gt;Entry 2&lt;/li&gt;
   &lt;li&gt;Entry 3&lt;/li&gt;
 &lt;/ul&gt;</code></pre></div><div class="code"><h4>Stylus</h4><pre><code class="language-stylus">ul
-  sm-horizontal-list()</code></pre></div><div class="code"><h4>Class based</h4><pre><code class="language-markup">&lt;ul class=&quot;horizontal-list&quot;&gt;&quot;&gt;
+  sm-horizontal-list()</code></pre></div><div class="code"><h4>Class based</h4><pre><code class="language-markup">&lt;ul class=&quot;horizontal-list&quot;&gt;
   &lt;li&gt;Entry 1&lt;/li&gt;
   &lt;li&gt;Entry 2&lt;/li&gt;
   &lt;li&gt;Entry 3&lt;/li&gt;
