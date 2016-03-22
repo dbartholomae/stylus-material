@@ -14,7 +14,6 @@ sm-navbar($bgcolor = $primary-color, $font-color = $light-text-color, $padding =
       $use-container = true, $title-tag = "h1", $align-right = true, $fixed = true, $title-size = 1.25 rem
     )
   sm-clearfix()
-  position: relative
   if $font-color
     color: $font-color
   if $bgcolor
@@ -22,6 +21,9 @@ sm-navbar($bgcolor = $primary-color, $font-color = $light-text-color, $padding =
   sm-z(1)
   if $use-container
     sm-container()
+
+  if !$fixed
+    position: relative
 
   if $fixed
     position: fixed
