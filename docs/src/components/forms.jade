@@ -1,0 +1,40 @@
+section#forms
+  .headline-wrapper
+    h1 Forms
+  form
+    input(type="text")
+    label Label
+
+  .codes
+    .code
+      h4 HTML
+      pre: code.language-markup
+        = '<form>\n'
+        = '  <input type="text">\n'
+        = '  <label>Label</label>\n'
+        = '</form>'
+    .code
+      h4 Stylus
+      pre: code.language-stylus.
+        input
+          sm-input()
+    .code
+      h4 Class based
+      pre: code.language-markup
+        = '<form>\n'
+        = '  <input class="input" type="text">\n'
+        = '  <label>Label</label>\n'
+        = '</form>'
+    .code
+      h4 Tag based
+      pre: code.language-markup
+        = '<form>\n'
+        = '  <input type="text">\n'
+        = '  <label>Label</label>\n'
+        = '</form>'
+  h4 With all options
+    pre: code.language-stylus.
+      input
+        sm-input($height: 3rem, $fontsize: 1rem, $label-tag: "label",
+               $border-color: #DDD, $disabled-color: rgba(0,0,0,.26) , $focus-color: $accent-color
+           )
