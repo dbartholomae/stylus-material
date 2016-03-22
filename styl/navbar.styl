@@ -8,10 +8,10 @@
 // Create a full-width bar elevated to height 1 with sensible defaults (see example).
 //
 // ex. sm-navbar($bgcolor: $primary-color, $font-color: $light-text-color, $padding: 8px,
-//           $use-container: true, $title-tag: "h1", $align-right: true, $fixed: true
+//           $use-container: true, $title-tag: "h1", $align-right: true, $fixed: true, $title-size: 1.25 rem
 //         )
 sm-navbar($bgcolor = $primary-color, $font-color = $light-text-color, $padding = 8px,
-      $use-container = true, $title-tag = "h1", $align-right = true, $fixed = true
+      $use-container = true, $title-tag = "h1", $align-right = true, $fixed = true, $title-size = 1.25 rem
     )
   sm-clearfix()
   position: relative
@@ -51,7 +51,8 @@ sm-navbar($bgcolor = $primary-color, $font-color = $light-text-color, $padding =
     > {selector($title-tag)}
       display: inline-table
       margin: 0
-      font-size: 1.25rem
+      if $title-size
+        font-size: $title-size
       if $align-right
         float: left
 
