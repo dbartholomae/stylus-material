@@ -101,7 +101,7 @@ aliquyam erat, sed diam voluptua.</p></article><div class="codes"><div class="co
 &lt;/form&gt;</code></pre></div></div><h4>With all options<pre><code class="language-stylus">input
   sm-input($height: 3rem, $fontsize: 1rem, $label-tag: "label", $width: 100%,
          $border-color: #DDD, $disabled-color: rgba(0,0,0,.26) , $focus-color: $accent-color
-     )</code></pre></h4></section><section id="pricing-table"><div class="headline-wrapper"><h1>Pricing table</h1></div><div class="pricing-table"><article><h1>Free</h1><ul><li>0.5 MB space</li><li>10 second reaction time</li><li>No uptime guarantee and we won't even try</li></ul><div class="price"><div class="value">0</div><div class="currency">$</div></div><div class="comment">per month per user</div><button>Sign up!</button></article><article class="active"><h1>Basic</h1><p>Most popular</p><ul><li>100 MB space</li><li>1 second reaction time</li><li>No uptime guarantee, but we'll try</li></ul><div class="price"><div class="value">1,000</div><div class="currency">$</div></div><div class="comment">per month per user</div><button>Sign up!</button></article><article><h1>Premium</h1><ul><li>1 GB space</li><li>0.1 second reaction time</li><li>Should be up most of the time</li></ul><div class="price"><div class="value">A gazillion</div><div class="currency">$</div></div><div class="comment">per month per user</div><button>Sign up!</button></article></div><div class="codes"><div class="code"><h4>HTML</h4><pre><code class="language-markup">&lt;div class=&quot;pricing-table&quot;&gt;
+     )</code></pre></h4></section><section id="pricing-table"><div class="headline-wrapper"><h1>Pricing table</h1></div><div class="pricing-table"><article><h1>Free</h1><ul><li>0.5 MB space</li><li>10 second reaction time</li><li>No uptime guarantee and we won't even try</li></ul><div class="price"><div class="value">0</div><div class="currency">$</div></div><div class="comment">per month per user</div><button>Sign up!</button></article><article class="active"><p>Most popular</p><h1>Basic</h1><ul><li>100 MB space</li><li>1 second reaction time</li><li>No uptime guarantee, but we'll try</li></ul><div class="price"><div class="value">1,000</div><div class="currency">$</div></div><div class="comment">per month per user</div><button>Sign up!</button></article><article><h1>Premium</h1><ul><li>1 GB space</li><li>0.1 second reaction time</li><li>Should be up most of the time</li></ul><div class="price"><div class="value">A gazillion</div><div class="currency">$</div></div><div class="comment">per month per user</div><button>Sign up!</button></article></div><div class="codes"><div class="code"><h4>HTML</h4><pre><code class="language-markup">&lt;div class=&quot;pricing-table&quot;&gt;
   &lt;article&gt;
    &lt;h1&gt;Free&lt;/h1&gt;
    &lt;ul&gt;
@@ -117,6 +117,7 @@ aliquyam erat, sed diam voluptua.</p></article><div class="codes"><div class="co
    &lt;button&gt;Sign up!&lt;/button&gt;
   &lt;/article&gt;
   &lt;article class=&quot;active&quot;&gt;
+   &lt;p&gt;Most popular!&lt;/p&gt;
    &lt;h1&gt;Basic&lt;/h1&gt;
    &lt;ul&gt;
      &lt;li&gt;100 MB space&lt;/li&gt;
@@ -145,7 +146,6 @@ aliquyam erat, sed diam voluptua.</p></article><div class="codes"><div class="co
    &lt;button&gt;Sign up!&lt;/button&gt;
   &lt;/article&gt;
 &lt;/div&gt;</code></pre></div><div class="code"><h4>Stylus</h4><pre><code class="language-stylus">.pricing-table
-  sm-columns(3, 3, 1, $margin-horizontal: 0)
   sm-pricing-table()</code></pre></div><div class="code"><h4>Class based</h4><pre><code class="language-markup">&lt;div class=&quot;pricing-table&quot;&gt;
   &lt;article&gt;
    &lt;h1 class=&quot;title&quot;&gt;Free&lt;/h1&gt;
@@ -162,6 +162,7 @@ aliquyam erat, sed diam voluptua.</p></article><div class="codes"><div class="co
    &lt;button class=&quot;button&quot;&gt;Sign up!&lt;/button&gt;
   &lt;/article&gt;
   &lt;article class=&quot;active&quot;&gt;
+   &lt;p&gt;Most popular!&lt;/p&gt;
    &lt;h1 class=&quot;title&quot;&gt;Basic&lt;/h1&gt;
    &lt;ul class=&quot;features&quot;&gt;
      &lt;li&gt;100 MB space&lt;/li&gt;
@@ -190,7 +191,6 @@ aliquyam erat, sed diam voluptua.</p></article><div class="codes"><div class="co
    &lt;button class=&quot;button&quot;&gt;Sign up!&lt;/button&gt;
   &lt;/article&gt;
 &lt;/div&gt;</code></pre></div><div class="code"><h4>Tag based</h4><p>Not possible</p></div></div><h4>With all options<pre><code class="language-stylus">.pricing-table
-  sm-columns(3, 3, 1, $margin-horizontal: 0)
   sm-pricing-table($title-tag: "h1", $feature-list-tag: "ul", $highlight-tag: "p", $button-tag: "button",
     $price-tag: ".price", $currency-tag: ".currency", $value-tag: ".value", $comment-tag: ".comment",
     $title-fontsize: 2rem, $title-padding: .5rem, $title-bg-color: $primary-color,

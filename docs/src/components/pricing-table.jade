@@ -14,8 +14,8 @@ section#pricing-table
       .comment per month per user
       button Sign up!
     article.active
-      h1 Basic
       p Most popular
+      h1 Basic
       ul
         li 100 MB space
         li 1 second reaction time
@@ -57,6 +57,7 @@ section#pricing-table
         = '   <button>Sign up!</button>\n'
         = '  </article>\n'
         = '  <article class="active">\n'
+        = '   <p>Most popular!</p>\n'
         = '   <h1>Basic</h1>\n'
         = '   <ul>\n'
         = '     <li>100 MB space</li>\n'
@@ -89,7 +90,6 @@ section#pricing-table
       h4 Stylus
       pre: code.language-stylus.
         .pricing-table
-          sm-columns(3, 3, 1, $margin-horizontal: 0)
           sm-pricing-table()
     .code
       h4 Class based
@@ -110,6 +110,7 @@ section#pricing-table
         = '   <button class="button">Sign up!</button>\n'
         = '  </article>\n'
         = '  <article class="active">\n'
+        = '   <p>Most popular!</p>\n'
         = '   <h1 class="title">Basic</h1>\n'
         = '   <ul class="features">\n'
         = '     <li>100 MB space</li>\n'
@@ -144,7 +145,6 @@ section#pricing-table
   h4 With all options
     pre: code.language-stylus.
       .pricing-table
-        sm-columns(3, 3, 1, $margin-horizontal: 0)
         sm-pricing-table($title-tag: "h1", $feature-list-tag: "ul", $highlight-tag: "p", $button-tag: "button",
           $price-tag: ".price", $currency-tag: ".currency", $value-tag: ".value", $comment-tag: ".comment",
           $title-fontsize: 2rem, $title-padding: .5rem, $title-bg-color: $primary-color,
