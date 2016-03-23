@@ -781,18 +781,6 @@ main section#cards article > h1 {
   top: -24px;
   margin-top: -12px;
   height: 0;
-  z-index: -1;
-}
-main section#cards article > h1:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -36px;
-  width: 100%;
-  height: 96px;
-  pointer-events: none;
-  z-index: -1;
-  background: linear-gradient(0deg, rgba(0,0,0,0.65), rgba(0,0,0,0.33) 66%, rgba(0,0,0,0));
 }
 main section#cards article > img {
   position: relative;
@@ -800,7 +788,16 @@ main section#cards article > img {
   display: block;
   padding: 0;
   border-radius: 2px 2px 0 0;
-  z-index: -1;
+}
+main section#cards article > img:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 96px;
+  pointer-events: none;
+  background: linear-gradient(0deg, rgba(0,0,0,0.65), rgba(0,0,0,0.33) 33%, rgba(0,0,0,0));
 }
 main section#collections ul {
   border: 1px solid #e0e0e0;
