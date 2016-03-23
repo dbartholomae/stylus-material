@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><link rel="stylesheet" href="index.min.css"><meta name="viewport" content="width=device-width, initial-scale=1"><script src="../node_modules/prismjs/components/prism-core.min.js"></script><script src="../node_modules/prismjs/components/prism-markup.min.js"></script><script src="../node_modules/prismjs/components/prism-stylus.min.js"></script><link href="../node_modules/prismjs/themes/prism-coy.css" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,400italic,500,700,900" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><title>Showcase</title></head><body><header class="main"><nav><h1>Stylus Material</h1><a href="#basics">Basics</a><a href="#grid">Grid</a><a href="#colors">Colors</a><a href="#media-queries">Media queries</a><a href="#navbar">Navbar</a><a href="#cards">Cards</a><a href="#chips">Chips</a><a href="#forms">Forms</a><a href="#flow-text">Flow text</a><a href="#buttons">Buttons</a><a href="#collections">Collections</a><a href="#horizontal-list">Horizontal lists</a><a href="#footer">Footer</a></nav></header><main><section id="grid"><div class="headline-wrapper"><h1>Grid</h1></div><h2>Container</h2><div class="container"><p>Padded content</p></div><div class="codes"><div class="code"><h4>HTML</h4><pre><code class="language-markup">&lt;div class=&quot;container&quot;&gt;
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><link rel="stylesheet" href="index.css"><meta name="viewport" content="width=device-width, initial-scale=1"><script src="../node_modules/prismjs/components/prism-core.min.js"></script><script src="../node_modules/prismjs/components/prism-markup.min.js"></script><script src="../node_modules/prismjs/components/prism-stylus.min.js"></script><link href="../node_modules/prismjs/themes/prism-coy.css" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,400italic,500,700,900" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><title>Showcase</title></head><body><header class="main"><nav><h1>Stylus Material</h1><a href="#basics">Basics</a><a href="#grid">Grid</a><a href="#colors">Colors</a><a href="#media-queries">Media queries</a><a href="#navbar">Navbar</a><a href="#cards">Cards</a><a href="#chips">Chips</a><a href="#forms">Forms</a><a href="#pricing-table">Pricing table</a><a href="#flow-text">Flow text</a><a href="#buttons">Buttons</a><a href="#collections">Collections</a><a href="#horizontal-list">Horizontal lists</a><a href="#footer">Footer</a></nav></header><main><section id="grid"><div class="headline-wrapper"><h1>Grid</h1></div><h2>Container</h2><div class="container"><p>Padded content</p></div><div class="codes"><div class="code"><h4>HTML</h4><pre><code class="language-markup">&lt;div class=&quot;container&quot;&gt;
   &lt;p&gt;Padded content&lt;/p&gt;
 &lt;/div&gt;</code></pre></div><div class="code"><h4>Stylus</h4><pre><code class="language-stylus">.container
   sm-container()</code></pre></div><div class="code"><h4>Class based</h4><pre><code class="language-markup">&lt;div class=&quot;container&quot;&gt;
@@ -101,7 +101,106 @@ aliquyam erat, sed diam voluptua.</p></article><div class="codes"><div class="co
 &lt;/form&gt;</code></pre></div></div><h4>With all options<pre><code class="language-stylus">input
   sm-input($height: 3rem, $fontsize: 1rem, $label-tag: "label", $width: 100%,
          $border-color: #DDD, $disabled-color: rgba(0,0,0,.26) , $focus-color: $accent-color
-     )</code></pre></h4></section><section id="flow-text"><div class="headline-wrapper"><h1>Flow text</h1></div><p>This text is automatically resized based on screen size for optimal legibility.</p><div class="codes"><div class="code"><h4>HTML</h4><pre><code class="language-markup">&lt;p&gt;Some text&lt;/p&gt;</code></pre></div><div class="code"><h4>Stylus</h4><pre><code class="language-stylus">p
+     )</code></pre></h4></section><section id="pricing-table"><div class="headline-wrapper"><h1>Pricing table</h1></div><div class="pricing-table"><article><h1>Free</h1><ul><li>0.5 MB space</li><li>10 second reaction time</li><li>No uptime guarantee and we won't even try</li></ul><div class="price"><div class="value">0</div><div class="currency">$</div></div><div class="comment">per month per user</div><button>Sign up!</button></article><article class="active"><h1>Basic</h1><p>Most popular</p><ul><li>100 MB space</li><li>1 second reaction time</li><li>No uptime guarantee, but we'll try</li></ul><div class="price"><div class="value">1,000</div><div class="currency">$</div></div><div class="comment">per month per user</div><button>Sign up!</button></article><article><h1>Premium</h1><ul><li>1 GB space</li><li>0.1 second reaction time</li><li>Should be up most of the time</li></ul><div class="price"><div class="value">A gazillion</div><div class="currency">$</div></div><div class="comment">per month per user</div><button>Sign up!</button></article></div><div class="codes"><div class="code"><h4>HTML</h4><pre><code class="language-markup">&lt;div class=&quot;pricing-table&quot;&gt;
+  &lt;article&gt;
+   &lt;h1&gt;Free&lt;/h1&gt;
+   &lt;ul&gt;
+     &lt;li&gt;0.5 MB space&lt;/li&gt;
+     &lt;li&gt;10 second reaction time&lt;/li&gt;
+     &lt;li&gt;No uptime guarantee&lt;/li&gt;
+   &lt;/ul&gt;
+   &lt;div class=&quot;price&quot;&gt;
+     &lt;div class=&quot;value&quot;&gt;0&lt;/div&gt;
+     &lt;div class=&quot;currency&quot;&gt;$&lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;comment&quot;&gt;per month per user&lt;/div&gt;
+   &lt;button&gt;Sign up!&lt;/button&gt;
+  &lt;/article&gt;
+  &lt;article class=&quot;active&quot;&gt;
+   &lt;h1&gt;Basic&lt;/h1&gt;
+   &lt;ul&gt;
+     &lt;li&gt;100 MB space&lt;/li&gt;
+     &lt;li&gt;1 second reaction time&lt;/li&gt;
+     &lt;li&gt;No uptime guarantee&lt;/li&gt;
+   &lt;/ul&gt;
+   &lt;div class=&quot;price&quot;&gt;
+     &lt;div class=&quot;value&quot;&gt;1,000&lt;/div&gt;
+     &lt;div class=&quot;currency&quot;&gt;$&lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;comment&quot;&gt;per month per user&lt;/div&gt;
+   &lt;button&gt;Sign up!&lt;/button&gt;
+  &lt;/article&gt;
+  &lt;article&gt;
+   &lt;h1&gt;Premium&lt;/h1&gt;
+   &lt;ul&gt;
+     &lt;li&gt;1 GB space&lt;/li&gt;
+     &lt;li&gt;0.1 second reaction time&lt;/li&gt;
+     &lt;li&gt;Should be up most of the time&lt;/li&gt;
+   &lt;/ul&gt;
+   &lt;div class=&quot;price&quot;&gt;
+     &lt;div class=&quot;value&quot;&gt;A gazillion&lt;/div&gt;
+     &lt;div class=&quot;currency&quot;&gt;$&lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;comment&quot;&gt;per month per user&lt;/div&gt;
+   &lt;button&gt;Sign up!&lt;/button&gt;
+  &lt;/article&gt;
+&lt;/div&gt;</code></pre></div><div class="code"><h4>Stylus</h4><pre><code class="language-stylus">.pricing-table
+  sm-columns(3, 3, 1, $margin-horizontal: 0)
+  sm-pricing-table()</code></pre></div><div class="code"><h4>Class based</h4><pre><code class="language-markup">&lt;div class=&quot;pricing-table&quot;&gt;
+  &lt;article&gt;
+   &lt;h1 class=&quot;title&quot;&gt;Free&lt;/h1&gt;
+   &lt;ul class=&quot;features&quot;&gt;
+     &lt;li&gt;0.5 MB space&lt;/li&gt;
+     &lt;li&gt;10 second reaction time&lt;/li&gt;
+     &lt;li&gt;No uptime guarantee&lt;/li&gt;
+   &lt;/ul&gt;
+   &lt;div class=&quot;price&quot;&gt;
+     &lt;div class=&quot;value&quot;&gt;0&lt;/div&gt;
+     &lt;div class=&quot;currency&quot;&gt;$&lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;comment&quot;&gt;per month per user&lt;/div&gt;
+   &lt;button class=&quot;button&quot;&gt;Sign up!&lt;/button&gt;
+  &lt;/article&gt;
+  &lt;article class=&quot;active&quot;&gt;
+   &lt;h1 class=&quot;title&quot;&gt;Basic&lt;/h1&gt;
+   &lt;ul class=&quot;features&quot;&gt;
+     &lt;li&gt;100 MB space&lt;/li&gt;
+     &lt;li&gt;1 second reaction time&lt;/li&gt;
+     &lt;li&gt;No uptime guarantee&lt;/li&gt;
+   &lt;/ul&gt;
+   &lt;div class=&quot;price&quot;&gt;
+     &lt;div class=&quot;value&quot;&gt;1,000&lt;/div&gt;
+     &lt;div class=&quot;currency&quot;&gt;$&lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;comment&quot;&gt;per month per user&lt;/div&gt;
+   &lt;button class=&quot;button&quot;&gt;Sign up!&lt;/button&gt;
+  &lt;/article&gt;
+  &lt;article&gt;
+   &lt;h1 class=&quot;title&quot;&gt;Premium&lt;/h1&gt;
+   &lt;ul class=&quot;features&quot;&gt;
+     &lt;li&gt;1 GB space&lt;/li&gt;
+     &lt;li&gt;0.1 second reaction time&lt;/li&gt;
+     &lt;li&gt;Should be up most of the time&lt;/li&gt;
+   &lt;/ul&gt;
+   &lt;div class=&quot;price&quot;&gt;
+     &lt;div class=&quot;value&quot;&gt;A gazillion&lt;/div&gt;
+     &lt;div class=&quot;currency&quot;&gt;$&lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;comment&quot;&gt;per month per user&lt;/div&gt;
+   &lt;button class=&quot;button&quot;&gt;Sign up!&lt;/button&gt;
+  &lt;/article&gt;
+&lt;/div&gt;</code></pre></div><div class="code"><h4>Tag based</h4><p>Not possible</p></div></div><h4>With all options<pre><code class="language-stylus">.pricing-table
+  sm-columns(3, 3, 1, $margin-horizontal: 0)
+  sm-pricing-table($title-tag: "h1", $feature-list-tag: "ul", $highlight-tag: "p", $button-tag: "button",
+    $price-tag: ".price", $currency-tag: ".currency", $value-tag: ".value", $comment-tag: ".comment",
+    $title-fontsize: 2rem, $title-padding: .5rem, $title-bg-color: $primary-color,
+    $title-color: light($title-bg-color) ? $primary-text-color : $light-text-color,
+    $feature-icon: '\2022', $feature-icon-font: false, $feature-fontsize: 1.5rem,
+    $highlight-fontsize: (0.6 * $title-fontsize),
+    $currency-first: true,
+    $main-element: $active-selector, $main-title-bg-color: $accent-color,
+    $main-title-color: light($main-title-bg-color) ? $primary-text-color : $light-text-color
+  )</code></pre></h4></section><section id="flow-text"><div class="headline-wrapper"><h1>Flow text</h1></div><p>This text is automatically resized based on screen size for optimal legibility.</p><div class="codes"><div class="code"><h4>HTML</h4><pre><code class="language-markup">&lt;p&gt;Some text&lt;/p&gt;</code></pre></div><div class="code"><h4>Stylus</h4><pre><code class="language-stylus">p
   sm-flow-text()</code></pre></div><div class="code"><h4>Class based</h4><pre><code class="language-markup">&lt;p class=&quot;flow-text&quot;&gt;Some text&lt;/p&gt;</code></pre></div><div class="code"><h4>Tag based</h4><pre><code class="language-markup">&lt;p&gt;Some text&lt;/p&gt;</code></pre></div></div><h4>With all options<pre><code class="language-stylus">p
   sm-flow-text($intervals: 20, $range: $large-screen - $small-screen,
       $interval-size: $range / $intervals, $base-size: 1.2rem

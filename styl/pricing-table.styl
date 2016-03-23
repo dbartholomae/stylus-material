@@ -1,0 +1,140 @@
+@require "./variables"
+@require "./z"
+@require "./button"
+
+// Mixin: Pricing table
+//
+// Adds a pricing table.
+//
+// ex. sm-pricing-table($title-tag: "h1", $feature-list-tag: "ul", $highlight-tag: "p", $button-tag: "button",
+//         $price-tag: ".price", $currency-tag: ".currency", $value-tag: ".value", $comment-tag: ".comment",
+//         $title-fontsize: 2rem, $title-padding: .5rem, $title-bg-color: $primary-color,
+//         $title-color: light($title-bg-color) ? $primary-text-color : $light-text-color,
+//         $feature-icon: '\2022', $feature-icon-font: false, $feature-fontsize: 1.5rem,
+//         $highlight-fontsize: (0.6 * $title-fontsize),
+//         $currency-first: true,
+//         $main-element: $active-selector, $main-title-bg-color: $accent-color,
+//         $main-title-color: light($main-title-bg-color) ? $primary-text-color : $light-text-color
+//       )
+
+sm-pricing-table($title-tag = "h1", $feature-list-tag = "ul", $highlight-tag = "p", $button-tag = "button",
+    $price-tag = ".price", $currency-tag = ".currency", $value-tag = ".value", $comment-tag = ".comment",
+    $title-fontsize = 2rem, $title-padding = .5rem, $title-bg-color = $primary-color,
+    $title-color = light($title-bg-color) ? $primary-text-color : $light-text-color,
+    $feature-icon = '\2022', $feature-icon-font = false, $feature-fontsize = 1.5rem,
+    $highlight-fontsize = (0.6 * $title-fontsize),
+    $currency-first = true,
+    $main-element = $active-selector, $main-title-bg-color = $accent-color,
+    $main-title-color = light($main-title-bg-color) ? $primary-text-color : $light-text-color
+  )
+
+  if $highlight-tag
+    padding-top: (1.5 * $title-fontsize)
+
+  & > *
+    position: relative
+    sm-z: 1
+
+    & > *
+      margin-bottom: 1rem
+
+    &:hover
+      sm-z: 1.5
+
+    if $title-tag
+      & > {selector($title-tag)}
+        margin: 0
+        if $title-padding
+          padding: $title-padding
+        if $title-fontsize
+          font-size: $title-fontsize
+        if $title-bg-color
+          background-color: $title-bg-color
+        if $title-color
+          color: $title-color
+        text-align: center
+
+    if $feature-list-tag
+      & > {selector($feature-list-tag)}
+        font-size: $feature-fontsize
+        padding: 1rem 2rem
+        & > *
+          display: flex
+        & > *:before
+          display: block
+          if $feature-fontsize
+            font-size: $feature-fontsize
+          if $feature-icon
+            content: $feature-icon
+            margin-right: .5rem
+          if $feature-icon-font
+            font-family: $feature-icon-font
+
+    if $highlight-tag
+      & > {selector($highlight-tag)}
+        position: absolute
+        font-size: $highlight-fontsize
+        width: 100%
+        top: 0
+        margin: 0
+        margin-top: (-1.5 * $title-fontsize)
+        padding: (.75 * ($title-fontsize - $highlight-fontsize)) 0
+        sm-z: 0.5
+        text-align: center
+        font-weight: bold
+        text-transform: uppercase
+        background-color: lighten($title-bg-color, 40%)
+        color: darken($title-bg-color, 40%)
+
+    if $price-tag
+      & > {selector($price-tag)}
+        display: flex
+        justify-content: center
+
+        & > {selector($value-tag)}
+          if $currency-first
+            order: 2
+          if !$currency-first
+            order: 1
+          font-size: 4rem
+        & > {selector($currency-tag)}
+          if $currency-first
+            order: 1
+          if !$currency-first
+            order: 2
+          font-size: 2rem
+
+    if $comment-tag
+      & > {selector($comment-tag)}
+        display: block
+        text-align: center
+        font-size: 1rem
+
+    if $button-tag
+      & > {selector($button-tag)}
+        sm-button($bgcolor: $title-bg-color)
+        display: block
+        margin-left: auto
+        margin-right: auto
+
+  if $main-element
+    & > {selector($main-element)}
+      sm-z: 2
+      &:hover
+        sm-z: 3
+      if $title-tag
+        & > {selector($title-tag)}
+          if $main-title-bg-color
+            background-color: $main-title-bg-color
+          if $main-title-color
+            color: $main-title-color
+      if $highlight-tag
+        & > {selector($highlight-tag)}
+          background-color: lighten($main-title-bg-color, 40%)
+          color: darken($main-title-bg-color, 40%)
+      if $button-tag
+        & > {selector($button-tag)}
+          sm-button($bgcolor: $main-title-bg-color)
+          display: block
+          margin-left: auto
+          margin-right: auto

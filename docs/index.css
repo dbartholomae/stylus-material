@@ -305,7 +305,7 @@ ol > li {
 header.main nav {
   *zoom: 1;
   color: #fff;
-  background-color: #3f51b5;
+  background-color: #2f41a5;
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16), 0 1px 9px 0 rgba(0,0,0,0.13);
   padding-left: 5%;
   padding-right: 5%;
@@ -343,10 +343,10 @@ header.main nav > * {
   vertical-align: middle;
 }
 header.main nav > a:hover {
-  background-color: #4d5fc1;
+  background-color: #364abc;
 }
 header.main nav > a:active {
-  background-color: #6171c8;
+  background-color: #455aca;
 }
 header.main nav > h1 {
   display: inline-table;
@@ -382,7 +382,7 @@ main {
 }
 @media only screen and (min-width: 993px) {
   main > section > .headline-wrapper {
-    background-color: #324191;
+    background-color: #263484;
     position: absolute;
     top: 0;
     right: 0;
@@ -405,7 +405,7 @@ main > section > .headline-wrapper > h1 {
   }
 }
 main > section > h2 {
-  color: #3f51b5;
+  color: #2f41a5;
 }
 main pre code {
   font-size: 1rem;
@@ -441,7 +441,7 @@ main .codes > * {
 }
 main section {
   display: none;
-  padding-top: 50px;
+  padding-top: 100px;
 }
 main section:last-of-type {
   display: block;
@@ -781,6 +781,18 @@ main section#cards article > h1 {
   top: -24px;
   margin-top: -12px;
   height: 0;
+  z-index: -1;
+}
+main section#cards article > h1:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -36px;
+  width: 100%;
+  height: 96px;
+  pointer-events: none;
+  z-index: -1;
+  background: linear-gradient(0deg, rgba(0,0,0,0.65), rgba(0,0,0,0.33) 33%, rgba(0,0,0,0));
 }
 main section#cards article > img {
   position: relative;
@@ -788,16 +800,7 @@ main section#cards article > img {
   display: block;
   padding: 0;
   border-radius: 2px 2px 0 0;
-}
-main section#cards article > img:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 96px;
-  pointer-events: none;
-  background: linear-gradient(0deg, rgba(0,0,0,0.65), rgba(0,0,0,0.33) 33%, rgba(0,0,0,0));
+  z-index: -1;
 }
 main section#collections ul {
   border: 1px solid #e0e0e0;
@@ -818,12 +821,12 @@ main section#collections ul > *:last-child {
   border-bottom: none;
 }
 main section#collections ul > *:active {
-  background-color: #a6afe0;
-  color: #3f51b5;
+  background-color: #97a2e1;
+  color: #2f41a5;
 }
 main section#collections ul > *:hover {
-  color: #3f51b5;
-  background-color: #c4caea;
+  color: #2f41a5;
+  background-color: #b9c1eb;
 }
 main section#collections ul > * img {
   position: absolute;
@@ -879,6 +882,191 @@ main section#forms input[readonly="readonly"] + label {
 }
 main section#forms input:focus:not([readonly]) + label {
   color: #ff5622;
+}
+main section#pricing-table .pricing-table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 3rem;
+}
+main section#pricing-table .pricing-table > * {
+  margin-top: 0.5rem;
+}
+@media only screen and (max-width: 600px) {
+  main section#pricing-table .pricing-table > * {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  main section#pricing-table .pricing-table > * {
+    width: 33.33333333333333%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  main section#pricing-table .pricing-table > * {
+    width: 33.33333333333333%;
+  }
+}
+main section#pricing-table .pricing-table > * {
+  position: relative;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16), 0 1px 9px 0 rgba(0,0,0,0.13);
+}
+main section#pricing-table .pricing-table > * > * {
+  margin-bottom: 1rem;
+}
+main section#pricing-table .pricing-table > *:hover {
+  box-shadow: 0 4.5px 9px 0 rgba(0,0,0,0.195), 0 5px 17px 0 rgba(0,0,0,0.145);
+}
+main section#pricing-table .pricing-table > * > h1 {
+  margin: 0;
+  padding: 0.5rem;
+  font-size: 2rem;
+  background-color: #2f41a5;
+  color: #fff;
+  text-align: center;
+}
+main section#pricing-table .pricing-table > * > ul {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+}
+main section#pricing-table .pricing-table > * > ul > * {
+  display: flex;
+}
+main section#pricing-table .pricing-table > * > ul > *:before {
+  display: block;
+  font-size: 1.5rem;
+  content: '\2022';
+  margin-right: 0.5rem;
+}
+main section#pricing-table .pricing-table > * > p {
+  position: absolute;
+  font-size: 1.2rem;
+  width: 100%;
+  top: 0;
+  margin: 0;
+  margin-top: -3rem;
+  padding: 0.6rem 0;
+  box-shadow: 0 -0.5px 3px 0 rgba(0,0,0,0.115), 0 -3px 1px 0 rgba(0,0,0,0.115);
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #7483d7;
+  color: #1c2763;
+}
+main section#pricing-table .pricing-table > * > .price {
+  display: flex;
+  justify-content: center;
+}
+main section#pricing-table .pricing-table > * > .price > .value {
+  order: 2;
+  font-size: 4rem;
+}
+main section#pricing-table .pricing-table > * > .price > .currency {
+  order: 1;
+  font-size: 2rem;
+}
+main section#pricing-table .pricing-table > * > .comment {
+  display: block;
+  text-align: center;
+  font-size: 1rem;
+}
+main section#pricing-table .pricing-table > * > button {
+  color: #fff;
+  background-color: #2f41a5;
+  font-size: 1.3rem;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16), 0 1px 9px 0 rgba(0,0,0,0.13);
+  border: none;
+  border-radius: 2px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  outline: 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: 0.2s ease-out;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+main section#pricing-table .pricing-table > * > button:hover {
+  background-color: #3246b1;
+  box-shadow: 0 4.5px 9px 0 rgba(0,0,0,0.195), 0 5px 17px 0 rgba(0,0,0,0.145);
+}
+main section#pricing-table .pricing-table > * > button:active {
+  background-color: #2d3e9d;
+  box-shadow: 0 7px 12px 0 rgba(0,0,0,0.22), 0 9px 25px 0 rgba(0,0,0,0.16);
+}
+main section#pricing-table .pricing-table > * > button:disabled {
+  background-color: #dfdfdf;
+  box-shadow: none;
+  color: #9f9f9f;
+  cursor: default;
+}
+main section#pricing-table .pricing-table > * > button:disabled:hover {
+  background-color: #dfdfdf;
+  color: #9f9f9f;
+}
+main section#pricing-table .pricing-table > .active {
+  box-shadow: 0 7px 12px 0 rgba(0,0,0,0.22), 0 9px 25px 0 rgba(0,0,0,0.16);
+}
+main section#pricing-table .pricing-table > .active:hover {
+  box-shadow: 0 12px 18px 0 rgba(0,0,0,0.24), 0 17px 41px 0 rgba(0,0,0,0.19);
+}
+main section#pricing-table .pricing-table > .active > h1 {
+  background-color: #ff5622;
+  color: #202020;
+}
+main section#pricing-table .pricing-table > .active > p {
+  background-color: #ff9a7a;
+  color: #ad2900;
+}
+main section#pricing-table .pricing-table > .active > button {
+  color: #fff;
+  background-color: #ff5622;
+  font-size: 1.3rem;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16), 0 1px 9px 0 rgba(0,0,0,0.13);
+  border: none;
+  border-radius: 2px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  outline: 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: 0.2s ease-out;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+main section#pricing-table .pricing-table > .active > button:hover {
+  background-color: #ff5e2d;
+  box-shadow: 0 4.5px 9px 0 rgba(0,0,0,0.195), 0 5px 17px 0 rgba(0,0,0,0.145);
+}
+main section#pricing-table .pricing-table > .active > button:active {
+  background-color: #ff4b14;
+  box-shadow: 0 7px 12px 0 rgba(0,0,0,0.22), 0 9px 25px 0 rgba(0,0,0,0.16);
+}
+main section#pricing-table .pricing-table > .active > button:disabled {
+  background-color: #dfdfdf;
+  box-shadow: none;
+  color: #9f9f9f;
+  cursor: default;
+}
+main section#pricing-table .pricing-table > .active > button:disabled:hover {
+  background-color: #dfdfdf;
+  color: #9f9f9f;
 }
 main section#grid .container {
   padding-left: 5%;
@@ -936,7 +1124,7 @@ main section#horizontal-list ul > *:first-child:before {
 main section#navbar nav {
   *zoom: 1;
   color: #fff;
-  background-color: #3f51b5;
+  background-color: #2f41a5;
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16), 0 1px 9px 0 rgba(0,0,0,0.13);
   padding-left: 5%;
   padding-right: 5%;
@@ -969,10 +1157,10 @@ main section#navbar nav > * {
   vertical-align: middle;
 }
 main section#navbar nav > a:hover {
-  background-color: #4d5fc1;
+  background-color: #364abc;
 }
 main section#navbar nav > a:active {
-  background-color: #6171c8;
+  background-color: #455aca;
 }
 main section#navbar nav > h1 {
   display: inline-table;
@@ -982,7 +1170,7 @@ main section#navbar nav > h1 {
 footer {
   margin-top: 20px;
   padding-top: 20px;
-  background-color: #3f51b5;
+  background-color: #2f41a5;
   color: #fff;
 }
 footer > * {

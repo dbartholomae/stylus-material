@@ -59,7 +59,7 @@ main
 
   section
     sm-view()
-    padding-top: 50px
+    padding-top: 100px
 
   section#chips
     & .chip
@@ -92,6 +92,11 @@ main
   section#forms
     & input
       sm-input()
+
+  section#pricing-table
+    .pricing-table
+      sm-columns(3,3,1, $margin-horizontal: 0)
+      sm-pricing-table()
 
   section#grid
     & .container
