@@ -1,0 +1,157 @@
+section#pricing-table
+  .headline-wrapper
+    h1 Pricing table
+  .pricing-table
+    article
+      h1 Free
+      ul
+        li 0.5 MB space
+        li 10 second reaction time
+        li No uptime guarantee and we won't even try
+      .price
+        .value 0
+        .currency $
+      .comment per month per user
+      button Sign up!
+    article.active
+      p Most popular
+      h1 Basic
+      ul
+        li 100 MB space
+        li 1 second reaction time
+        li No uptime guarantee, but we'll try
+      .price
+        .value 1,000
+        .currency $
+      .comment per month per user
+      button Sign up!
+    article
+      h1 Premium
+      ul
+        li 1 GB space
+        li 0.1 second reaction time
+        li Should be up most of the time
+      .price
+        .value A gazillion
+        .currency $
+      .comment per month per user
+      button Sign up!
+
+  .codes
+    .code
+      h4 HTML
+      pre: code.language-markup
+        = '<div class="pricing-table">\n'
+        = '  <article>\n'
+        = '   <h1>Free</h1>\n'
+        = '   <ul>\n'
+        = '     <li>0.5 MB space</li>\n'
+        = '     <li>10 second reaction time</li>\n'
+        = '     <li>No uptime guarantee</li>\n'
+        = '   </ul>\n'
+        = '   <div class="price">\n'
+        = '     <div class="value">0</div>\n'
+        = '     <div class="currency">$</div>\n'
+        = '   </div>\n'
+        = '   <div class="comment">per month per user</div>\n'
+        = '   <button>Sign up!</button>\n'
+        = '  </article>\n'
+        = '  <article class="active">\n'
+        = '   <p>Most popular!</p>\n'
+        = '   <h1>Basic</h1>\n'
+        = '   <ul>\n'
+        = '     <li>100 MB space</li>\n'
+        = '     <li>1 second reaction time</li>\n'
+        = '     <li>No uptime guarantee</li>\n'
+        = '   </ul>\n'
+        = '   <div class="price">\n'
+        = '     <div class="value">1,000</div>\n'
+        = '     <div class="currency">$</div>\n'
+        = '   </div>\n'
+        = '   <div class="comment">per month per user</div>\n'
+        = '   <button>Sign up!</button>\n'
+        = '  </article>\n'
+        = '  <article>\n'
+        = '   <h1>Premium</h1>\n'
+        = '   <ul>\n'
+        = '     <li>1 GB space</li>\n'
+        = '     <li>0.1 second reaction time</li>\n'
+        = '     <li>Should be up most of the time</li>\n'
+        = '   </ul>\n'
+        = '   <div class="price">\n'
+        = '     <div class="value">A gazillion</div>\n'
+        = '     <div class="currency">$</div>\n'
+        = '   </div>\n'
+        = '   <div class="comment">per month per user</div>\n'
+        = '   <button>Sign up!</button>\n'
+        = '  </article>\n'
+        = '</div>'
+    .code
+      h4 Stylus
+      pre: code.language-stylus.
+        .pricing-table
+          sm-pricing-table()
+    .code
+      h4 Class based
+      pre: code.language-markup
+        = '<div class="pricing-table">\n'
+        = '  <article>\n'
+        = '   <h1 class="title">Free</h1>\n'
+        = '   <ul class="features">\n'
+        = '     <li>0.5 MB space</li>\n'
+        = '     <li>10 second reaction time</li>\n'
+        = '     <li>No uptime guarantee</li>\n'
+        = '   </ul>\n'
+        = '   <div class="price">\n'
+        = '     <div class="value">0</div>\n'
+        = '     <div class="currency">$</div>\n'
+        = '   </div>\n'
+        = '   <div class="comment">per month per user</div>\n'
+        = '   <button class="button">Sign up!</button>\n'
+        = '  </article>\n'
+        = '  <article class="active">\n'
+        = '   <p>Most popular!</p>\n'
+        = '   <h1 class="title">Basic</h1>\n'
+        = '   <ul class="features">\n'
+        = '     <li>100 MB space</li>\n'
+        = '     <li>1 second reaction time</li>\n'
+        = '     <li>No uptime guarantee</li>\n'
+        = '   </ul>\n'
+        = '   <div class="price">\n'
+        = '     <div class="value">1,000</div>\n'
+        = '     <div class="currency">$</div>\n'
+        = '   </div>\n'
+        = '   <div class="comment">per month per user</div>\n'
+        = '   <button class="button">Sign up!</button>\n'
+        = '  </article>\n'
+        = '  <article>\n'
+        = '   <h1 class="title">Premium</h1>\n'
+        = '   <ul class="features">\n'
+        = '     <li>1 GB space</li>\n'
+        = '     <li>0.1 second reaction time</li>\n'
+        = '     <li>Should be up most of the time</li>\n'
+        = '   </ul>\n'
+        = '   <div class="price">\n'
+        = '     <div class="value">A gazillion</div>\n'
+        = '     <div class="currency">$</div>\n'
+        = '   </div>\n'
+        = '   <div class="comment">per month per user</div>\n'
+        = '   <button class="button">Sign up!</button>\n'
+        = '  </article>\n'
+        = '</div>'
+    .code
+      h4 Tag based
+      p Not possible
+  h4 With all options
+    pre: code.language-stylus.
+      .pricing-table
+        sm-pricing-table($title-tag: "h1", $feature-list-tag: "ul", $highlight-tag: "p", $button-tag: "button",
+          $price-tag: ".price", $currency-tag: ".currency", $value-tag: ".value", $comment-tag: ".comment",
+          $title-fontsize: 2rem, $title-padding: .5rem, $title-bg-color: $primary-color,
+          $title-color: light($title-bg-color) ? $primary-text-color : $light-text-color,
+          $feature-icon: '\2022', $feature-icon-font: false, $feature-fontsize: 1.5rem,
+          $highlight-fontsize: (0.6 * $title-fontsize),
+          $currency-first: true,
+          $main-element: $active-selector, $main-title-bg-color: $accent-color,
+          $main-title-color: light($main-title-bg-color) ? $primary-text-color : $light-text-color
+        )

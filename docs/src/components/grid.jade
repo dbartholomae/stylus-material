@@ -1,0 +1,75 @@
+section#grid
+  .headline-wrapper
+    h1 Grid
+  h2 Container
+  .container
+    p Padded content
+
+  .codes
+    .code
+      h4 HTML
+      pre: code.language-markup
+        = '<div class="container">\n'
+        = '  <p>Padded content</p>\n'
+        = '</div>'
+    .code
+      h4 Stylus
+      pre: code.language-stylus.
+        .container
+          sm-container()
+    .code
+      h4 Class based
+      pre: code.language-markup
+        = '<div class="container">\n'
+        = '  <p>First column</p>\n'
+        = '  <p>Second column</p>\n'
+        = '  <p>Third column</p>\n'
+        = '</div>'
+    .code
+      h4 Tag based
+      p Not implemented
+  h4 With all options
+    pre: code.language-stylus.
+      .container
+        sm-container($large-padding: 15%, $medium-padding: ($large-padding/2),
+            $small-padding: ($large-padding/3)
+          )
+
+  h2 Columns
+  .columns
+    p First column
+    p Second column
+    p Third column
+
+  .codes
+    .code
+      h4 HTML
+      pre: code.language-markup
+        = '<div class="columns">\n'
+        = '  <p>First column</p>\n'
+        = '  <p>Second column</p>\n'
+        = '  <p>Third column</p>\n'
+        = '</div>'
+    .code
+      h4 Stylus
+      pre: code.language-stylus.
+        .columns
+          sm-columns()
+    .code
+      h4 Class based
+      pre: code.language-markup
+        = '<div class="columns-3-2-1">\n'
+        = '  <p>First column</p>\n'
+        = '  <p>Second column</p>\n'
+        = '  <p>Third column</p>\n'
+        = '</div>'
+    .code
+      h4 Tag based
+      p Not implemented
+  h4 With all options
+    pre: code.language-stylus.
+      .columns
+        sm-columns($n-large: 3, $n-medium: (ceil($n-large / 2)), $n-small: (ceil($n-large / 4)),
+            $margin-horizontal: 1%, $margin-vertical: 0.5rem,
+            $justify-content: space-around
+          )

@@ -1,0 +1,62 @@
+section#collections
+  .headline-wrapper
+    h1 Collections
+  ul
+    li
+      img(src="assets/leaves.jpg")
+      p Entry 1
+    li Entry 2
+    h4 Collections
+    li Entry 3
+
+  .codes
+    .code
+      h4 HTML
+      pre: code.language-markup
+        = '<ul>">\n'
+        = '  <li>\n'
+        = '    <img src="assets/leaves.jpg">\n'
+        = '    <p>Entry 1</p>\n'
+        = '  </li>\n'
+        = '  <li>Entry 2</li>\n'
+        = '  <h4>Collections</h4>\n'
+        = '  <li>Entry 3</li>\n'
+        = '</ul>'
+    .code
+      h4 Stylus
+      pre: code.language-stylus.
+        ul
+          sm-collection()
+    .code
+      h4 Class based
+      pre: code.language-markup
+        = '<ul class="collection">">\n'
+        = '  <li>\n'
+        = '    <img class="collection-img" src="assets/leaves.jpg">\n'
+        = '    <p class="collection-content">Entry 1</p>\n'
+        = '  </li>\n'
+        = '  <li>Entry 2</li>\n'
+        = '  <h4 class="collection-header">Collections</h4>\n'
+        = '  <li>Entry 3</li>\n'
+        = '</ul>'
+    .code
+      h4 Tag based
+      pre: code.language-markup
+        = '<ul>">\n'
+        = '  <li>\n'
+        = '    <img src="assets/leaves.jpg">\n'
+        = '    <p>Entry 1</p>\n'
+        = '  </li>\n'
+        = '  <li>Entry 2</li>\n'
+        = '  <h4>Collections</h4>\n'
+        = '  <li>Entry 3</li>\n'
+        = '</ul>'
+  h4 With all options
+    pre: code.language-stylus.
+      ul
+        sm-collection($border-color: #e0e0e0, $bg-color: $background-color,
+            $active-color: $primary-color, $active-bg-color: lighten($active-color, 55%),
+            $hover: true, $hover-color: $primary-color, $hover-bg-color: lighten($primary-color, 70%),
+            $title-tag: "h4", $img-tag: "img", $img-size: 34px, $img-circle: false, $vertical-padding: 20px,
+            $content-tag: "p"
+          )

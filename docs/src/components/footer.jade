@@ -1,0 +1,40 @@
+section#footer
+  .headline-wrapper
+    h1 Footer
+  footer
+    p Some more text
+    small © Copyright, Example Cooperation
+
+  .codes
+    .code
+      h4 HTML
+      pre: code.language-markup
+        = '<footer>\n'
+        = '  <p>Some more text</p>\n'
+        = '  <small>© Copyright, Example Cooperation</small>\n'
+        = '</footer>'
+    .code
+      h4 Stylus
+      pre: code.language-stylus.
+        footer
+          sm-footer()
+    .code
+      h4 Class based
+      pre: code.language-markup
+        = '<footer class="footer">\n'
+        = '  <p>Some more text</p>\n'
+        = '  <small class="footer-copyright">© Copyright, Example Cooperation</small>\n'
+        = '</footer>'
+    .code
+      h4 Tag based
+      pre: code.language-markup
+        = '<footer>\n'
+        = '  <p>Some more text</p>\n'
+        = '  <small>© Copyright, Example Cooperation</small>\n'
+        = '</footer>'
+  h4 With all options
+    pre: code.language-stylus.
+      footer
+        sm-footer($copyright-tag: "small", $bg-color: $primary-color, $color: $light-text-color,
+            $margin-top: 20px, $padding-top: 20px, $use-container: true
+          )

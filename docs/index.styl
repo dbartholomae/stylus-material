@@ -1,0 +1,115 @@
+@require "../"
+
+sm-init()
+
+p
+  sm-flow-text()
+
+ol > li
+  sm-flow-text()
+
+header.main
+  & nav
+    sm-navbar()
+
+body
+  min-height: 100vh
+
+main
+  min-height: 100vh
+  position: relative
+  sm-container()
+
+  & > section
+    & > .headline-wrapper
+      @media $medium-and-down
+        margin-top: 5rem
+      @media $large-and-up
+        background-color: darken($primary-color, 20%)
+        position: absolute
+        top: 0
+        right: 0
+        height: 100%
+        width: 1rem
+        padding-top: 5rem
+        padding-left: 5rem
+
+      & > h1
+        margin: 0
+        @media $large-and-up
+          color: $light-text-color
+          float: left
+          transform: rotate(90deg)
+          transform-origin: top left 0
+          white-space: nowrap
+
+    & > h2
+      color: $primary-color
+
+  pre
+    & code
+      font-size: 1rem
+    &:before
+      visibility: hidden
+    &:after
+      visibility: hidden
+
+  .codes
+    sm-columns(2, 1, 1)
+
+  section
+    sm-view()
+    padding-top: 100px
+
+  section#chips
+    & .chip
+      sm-chip()
+
+  section#flow-text
+    & p
+      sm-flow-text()
+
+  section#buttons
+    & button
+      margin 1rem
+      &.default
+        sm-button()
+      &.flat
+        sm-button-flat()
+      &.large
+        sm-button-large()
+      &.disc
+        sm-button-disc()
+
+  section#cards
+    & article
+      sm-card()
+
+  section#collections
+    & ul
+      sm-collection()
+
+  section#forms
+    & input
+      sm-input()
+
+  section#pricing-table
+    .pricing-table
+      sm-pricing-table()
+
+  section#grid
+    & .container
+      sm-container()
+    & .columns
+      sm-columns()
+
+  section#horizontal-list
+    & ul
+      sm-horizontal-list('—')
+
+  section#navbar
+    & nav
+      sm-navbar($fixed: false, $align-right: false)
+
+footer
+  sm-footer()

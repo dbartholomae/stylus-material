@@ -1,0 +1,29 @@
+section#flow-text
+  .headline-wrapper
+    h1 Flow text
+  p This text is automatically resized based on screen size for optimal legibility.
+
+  .codes
+    .code
+      h4 HTML
+      pre: code.language-markup
+        = '<p>Some text</p>'
+    .code
+      h4 Stylus
+      pre: code.language-stylus.
+        p
+          sm-flow-text()
+    .code
+      h4 Class based
+      pre: code.language-markup
+        = '<p class="flow-text">Some text</p>'
+    .code
+      h4 Tag based
+      pre: code.language-markup
+        = '<p>Some text</p>'
+  h4 With all options
+    pre: code.language-stylus.
+      p
+        sm-flow-text($intervals: 20, $range: $large-screen - $small-screen,
+            $interval-size: $range / $intervals, $base-size: 1.2rem
+          )
