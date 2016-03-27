@@ -7,7 +7,9 @@
 A collection of stylus mixins for material design. This is basically a port of the static parts of
 [materialize](https://github.com/Dogfalo/materialize/) to
 [Stylus](https://github.com/stylus/stylus/) using Mixins.
- 
+
+Here's [the documentation](https://rawgit.com/dbartholomae/stylus-material/v1.4.3/docs/index.html).
+
 ## Installation
 Install with `npm`:
 ```sh
