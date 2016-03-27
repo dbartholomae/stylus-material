@@ -1,6 +1,6 @@
 {
   "name": "stylus-material",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "A collection of stylus mixins for material design",
   "author": "Daniel Bartholomae <db@wappforge.com> (http://www.wappforge.com/)",
   "license": "MIT",
@@ -16,9 +16,7 @@
     "size": "echo classes.min.css && gzipped classes.min.css && echo tags.min.css && gzipped tags.min.css",
     "dev": "nodemon --ext styl,jade --watch docs/ --watch styl/ --exec npm run build"
   },
-  "dependencies": {
-    "prismjs": "1.4.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "cssnano": "3.4.0",
     "del-cli": "0.1.2",
