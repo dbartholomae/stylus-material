@@ -37,7 +37,7 @@ footer
     sm-horizontal-list('—')
 ```
 
-You can find a documentation for all components in [a separate repository](https://rawgit.com/dbartholomae/stylus-material/master/docs/index.html).
+You can find a documentation for all components in [a separate repository](https://rawgit.com/dbartholomae/stylus-material-doc/master/docs/index.html).
 
 ## Library size
 This library uses mostly mixins, therefore only what you actually use will increase your filesize.
